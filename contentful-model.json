@@ -1,0 +1,213 @@
+{
+  "contentTypes": [
+    {
+      "name": "hero",
+      "fields": [
+        {
+          "id": "title",
+          "type": "Text"
+        },
+        {
+          "id": "subtitle",
+          "type": "Text"
+        },
+        {
+          "id": "backgroundImage",
+          "type": "Asset"
+        },
+        {
+          "id": "ctaText",
+          "type": "Text"
+        },
+        {
+          "id": "ctaLink",
+          "type": "Text"
+        }
+      ]
+    },
+    {
+      "name": "banner",
+      "fields": [
+        {
+          "id": "message",
+          "type": "Text"
+        },
+        {
+          "id": "linkText",
+          "type": "Text"
+        },
+        {
+          "id": "linkUrl",
+          "type": "Text"
+        }
+      ]
+    },
+    {
+      "name": "category",
+      "fields": [
+        {
+          "id": "name",
+          "type": "Text"
+        },
+        {
+          "id": "image",
+          "type": "Asset"
+        }
+      ]
+    },
+    {
+      "name": "product",
+      "fields": [
+        {
+          "id": "title",
+          "type": "Text"
+        },
+        {
+          "id": "price",
+          "type": "Number"
+        },
+        {
+          "id": "image",
+          "type": "Asset"
+        },
+        {
+          "id": "description",
+          "type": "RichText"
+        },
+        {
+          "id": "tags",
+          "type": "Array"
+        }
+      ]
+    },
+    {
+      "name": "testimonial",
+      "fields": [
+        {
+          "id": "quote",
+          "type": "Text"
+        },
+        {
+          "id": "author",
+          "type": "Text"
+        },
+        {
+          "id": "avatar",
+          "type": "Asset"
+        }
+      ]
+    },
+    {
+      "name": "footer",
+      "fields": [
+        {
+          "id": "infoLinks",
+          "type": "Array"
+        },
+        {
+          "id": "supportLinks",
+          "type": "Array"
+        },
+        {
+          "id": "newsletterText",
+          "type": "Text"
+        }
+      ]
+    },
+    {
+      "name": "ctaCard",
+      "fields": [
+        {
+          "id": "headline",
+          "type": "Text"
+        },
+        {
+          "id": "buttonText",
+          "type": "Text"
+        },
+        {
+          "id": "buttonUrl",
+          "type": "Text"
+        },
+        {
+          "id": "backgroundImage",
+          "type": "Asset"
+        }
+      ]
+    },
+    {
+      "name": "blogPreview",
+      "fields": [
+        {
+          "id": "title",
+          "type": "Text"
+        },
+        {
+          "id": "excerpt",
+          "type": "Text"
+        },
+        {
+          "id": "thumbnail",
+          "type": "Asset"
+        }
+      ]
+    },
+    {
+      "name": "contactForm",
+      "fields": [
+        {
+          "id": "formTitle",
+          "type": "Text"
+        },
+        {
+          "id": "recipientEmail",
+          "type": "Text"
+        }
+      ]
+    },
+    {
+      "name": "navigation",
+      "fields": [
+        {
+          "id": "menuItems",
+          "type": "Array"
+        }
+      ]
+    },
+    {
+      "name": "accordion",
+      "fields": [
+        {
+          "id": "items",
+          "type": "Array"
+        }
+      ]
+    },
+    {
+      "name": "accountLayout",
+      "fields": [
+        {
+          "id": "userInfo",
+          "type": "Object"
+        },
+        {
+          "id": "orderHistory",
+          "type": "Array"
+        },
+        {
+          "id": "accountUpdates",
+          "type": "Array"
+        }
+      ]
+    },
+    {
+      "name": "accountNavigation",
+      "fields": [
+        {
+          "id": "links",
+          "type": "Array"
+        }
+      ]
+    }
+  ]
+}
