@@ -41,7 +41,9 @@ module.exports = {
         host: process.env.GATSBY_CONTENTFUL_HOST, 
       },
     },
-    // other plugins...
+    'gatsby-plugin-image',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
   ],
   flags: {
     THE_FLAG: false,
