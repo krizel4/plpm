@@ -4,4 +4,7 @@ module.exports = {
     siteUrl: `https://jamm.matter.design`,
   },
   plugins: [],
+  flags: {
+    THE_FLAG: false,
+  }
 };
