@@ -9,7 +9,13 @@ import * as styles from './Layout.module.css';
 // CSS not modular here to provide global styles
 import './Globals.css';
 
-const Layout = ({ props, children, disablePaddingBottom = false }) => {
+const Layout = ({
+  props,
+  children,
+  disablePaddingBottom = false,
+  hideNav = false,
+  hideFooter = false,
+}) => {
   return (
     <>
       <Helmet>
@@ -22,26 +28,31 @@ const Layout = ({ props, children, disablePaddingBottom = false }) => {
         <link
           rel="stylesheet"
           type="text/css"
-          charset="UTF-8"
+          charSet="UTF-8"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
         />
       </Helmet>
 
-      <Header />
+      {!hideNav && <Header />}
+
       <main
         className={`${styles.main} ${
-          disablePaddingBottom === true ? styles.disablePaddingBottom : ''
+          disablePaddingBottom ? styles.disablePaddingBottom : ''
         }`}
       >
         {children}
       </main>
-      <Footer />
+
+      {!hideFooter && <Footer />}
     </>
   );
 };
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  disablePaddingBottom: PropTypes.bool,
+  hideNav: PropTypes.bool,
+  hideFooter: PropTypes.bool,
 };
 
 export default Layout;

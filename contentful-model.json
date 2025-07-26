@@ -1,211 +1,157 @@
 {
   "contentTypes": [
     {
-      "name": "hero",
+      "sys": {
+        "id": "hero"
+      },
+      "name": "Hero",
       "fields": [
         {
           "id": "title",
-          "type": "Text"
+          "name": "Title",
+          "type": "Symbol",
+          "required": true
         },
         {
           "id": "subtitle",
-          "type": "Text"
+          "name": "Subtitle",
+          "type": "Symbol"
         },
         {
           "id": "backgroundImage",
-          "type": "Asset"
+          "name": "Background Image",
+          "type": "Link",
+          "linkType": "Asset"
         },
         {
           "id": "ctaText",
-          "type": "Text"
+          "name": "CTA Text",
+          "type": "Symbol"
         },
         {
           "id": "ctaLink",
-          "type": "Text"
+          "name": "CTA Link",
+          "type": "Symbol"
         }
       ]
     },
     {
-      "name": "banner",
-      "fields": [
-        {
-          "id": "message",
-          "type": "Text"
-        },
-        {
-          "id": "linkText",
-          "type": "Text"
-        },
-        {
-          "id": "linkUrl",
-          "type": "Text"
-        }
-      ]
-    },
-    {
-      "name": "category",
-      "fields": [
-        {
-          "id": "name",
-          "type": "Text"
-        },
-        {
-          "id": "image",
-          "type": "Asset"
-        }
-      ]
-    },
-    {
-      "name": "product",
-      "fields": [
-        {
-          "id": "title",
-          "type": "Text"
-        },
-        {
-          "id": "price",
-          "type": "Number"
-        },
-        {
-          "id": "image",
-          "type": "Asset"
-        },
-        {
-          "id": "description",
-          "type": "RichText"
-        },
-        {
-          "id": "tags",
-          "type": "Array"
-        }
-      ]
-    },
-    {
-      "name": "testimonial",
+      "sys": {
+        "id": "testimonial"
+      },
+      "name": "Testimonial",
       "fields": [
         {
           "id": "quote",
+          "name": "Quote",
           "type": "Text"
         },
         {
           "id": "author",
-          "type": "Text"
+          "name": "Author",
+          "type": "Symbol"
         },
         {
-          "id": "avatar",
-          "type": "Asset"
+          "id": "role",
+          "name": "Role",
+          "type": "Symbol"
+        },
+        {
+          "id": "image",
+          "name": "Image",
+          "type": "Link",
+          "linkType": "Asset"
         }
       ]
     },
     {
-      "name": "footer",
-      "fields": [
-        {
-          "id": "infoLinks",
-          "type": "Array"
-        },
-        {
-          "id": "supportLinks",
-          "type": "Array"
-        },
-        {
-          "id": "newsletterText",
-          "type": "Text"
-        }
-      ]
-    },
-    {
-      "name": "ctaCard",
-      "fields": [
-        {
-          "id": "headline",
-          "type": "Text"
-        },
-        {
-          "id": "buttonText",
-          "type": "Text"
-        },
-        {
-          "id": "buttonUrl",
-          "type": "Text"
-        },
-        {
-          "id": "backgroundImage",
-          "type": "Asset"
-        }
-      ]
-    },
-    {
-      "name": "blogPreview",
-      "fields": [
-        {
-          "id": "title",
-          "type": "Text"
-        },
-        {
-          "id": "excerpt",
-          "type": "Text"
-        },
-        {
-          "id": "thumbnail",
-          "type": "Asset"
-        }
-      ]
-    },
-    {
-      "name": "contactForm",
-      "fields": [
-        {
-          "id": "formTitle",
-          "type": "Text"
-        },
-        {
-          "id": "recipientEmail",
-          "type": "Text"
-        }
-      ]
-    },
-    {
-      "name": "navigation",
-      "fields": [
-        {
-          "id": "menuItems",
-          "type": "Array"
-        }
-      ]
-    },
-    {
-      "name": "accordion",
-      "fields": [
-        {
-          "id": "items",
-          "type": "Array"
-        }
-      ]
-    },
-    {
-      "name": "accountLayout",
-      "fields": [
-        {
-          "id": "userInfo",
-          "type": "Object"
-        },
-        {
-          "id": "orderHistory",
-          "type": "Array"
-        },
-        {
-          "id": "accountUpdates",
-          "type": "Array"
-        }
-      ]
-    },
-    {
-      "name": "accountNavigation",
+      "sys": {
+        "id": "footer"
+      },
+      "name": "Footer",
       "fields": [
         {
           "id": "links",
-          "type": "Array"
+          "name": "Links",
+          "type": "Array",
+          "items": {
+            "type": "Symbol"
+          }
+        },
+        {
+          "id": "newsletterText",
+          "name": "Newsletter Text",
+          "type": "Text"
+        },
+        {
+          "id": "socialIcons",
+          "name": "Social Icons",
+          "type": "Array",
+          "items": {
+            "type": "Symbol"
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "ctaCard"
+      },
+      "name": "Call To Action Card",
+      "fields": [
+        {
+          "id": "headline",
+          "name": "Headline",
+          "type": "Symbol"
+        },
+        {
+          "id": "subtext",
+          "name": "Subtext",
+          "type": "Text"
+        },
+        {
+          "id": "ctaText",
+          "name": "CTA Text",
+          "type": "Symbol"
+        },
+        {
+          "id": "ctaLink",
+          "name": "CTA Link",
+          "type": "Symbol"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "navigation"
+      },
+      "name": "Navigation",
+      "fields": [
+        {
+          "id": "menuItems",
+          "name": "Menu Items",
+          "type": "Array",
+          "items": {
+            "type": "Symbol"
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "accordion"
+      },
+      "name": "Accordion",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol"
+        },
+        {
+          "id": "content",
+          "name": "Content",
+          "type": "Text"
         }
       ]
     }
