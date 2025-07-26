@@ -12,7 +12,7 @@ const IndexPage = () => {
     <Layout disablePaddingBottom hideNav hideFooter>
       <Hero
         maxWidth={'500px'}
-        image={'/Pretty-little-poppy-marketplace-Lancaster-ca-antelope-valley.png'}
+        image={'https://images.ctfassets.net/xuyebjupxu9b/6uPkrUykcG2pZlJ418JsFI/34cd32316bf3060d14a86e03228a4f19/Pretty-little-poppy-marketplace-Lancaster-ca-antelope-valley.png'}
         title={`We're on the Internet! \n Excuse our digital dust. \n Visit us again August '25.`}
       />
       {/* <div className={styles.messageContainer}>

@@ -1,6 +1,7 @@
 
 import * as React from 'react';
 
+// Need to update Layout.js to show Nav and Footer
 import AttributeGrid from '../components/AttributeGrid';
 import Container from '../components/Container';
 import Hero from '../components/Hero';
