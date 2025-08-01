@@ -37,7 +37,7 @@
   --medium: 1000px;
   --large: 1300px;
   --logo-font: 'Sharkbit', serif;
-  --standard-header: 'gardein', serif;
+  --standard-header: 'Gopher', serif;
   --standard-font: 'Proxima Nova', sans-serif;
   --brand-font: 'Yeseva One', cursive;
   --standard-black: #000000;
@@ -60,6 +60,8 @@
   --standard-gold: #B59F66;
   --sale: #902F15;
   --error: #9A3515;
+  --fc-event-bg-color: #f48125;
+  --fc-event-border-color: #f48125;
 
   /* not sure if we are to maintain existing color palletes. better if we keep it lightweight? */
   /* --standard-grey-darker: #393939;
@@ -132,7 +134,7 @@ h3,
   font-family: var(--standard-header);
   font-size: 42px;
   line-height: 49px;
-  margin: 0;
+  margin: 5px 0;
 }
 
 h4,
