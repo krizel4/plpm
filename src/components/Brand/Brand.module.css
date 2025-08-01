@@ -4,6 +4,11 @@
     cursor: pointer;
 }
 
+.logo {
+    font-family: var(--logo-font);
+    letter-spacing: 0.04em;
+}
+
 @media (max-width: 800px) {
     .root svg {
         width: 90px;

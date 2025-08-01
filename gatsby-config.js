@@ -1,5 +1,4 @@
 require('dotenv').config();
-const PREVIEW_SECRET = process.env.CONTENTFUL_PREVIEW_SECRET;
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;

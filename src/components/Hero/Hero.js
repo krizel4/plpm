@@ -17,8 +17,28 @@ const Hero = (props) => {
     ctaTo,
     header,
   } = props;
+  
+  const videoURL = props.video || props.videoURL;
   return (
-    <div className={styles.root} style={{ backgroundImage: `url(${toOptimizedImage(image)})` }}>
+    <div
+      className={styles.root}
+      style={
+        !videoURL ? { backgroundImage: `url(${toOptimizedImage(image)})` } : {}
+      }
+    >
+      {videoURL && (
+        <div className={styles.videoContainer}>
+          <video
+            className={styles.videoBackground}
+            src={videoURL}
+            autoPlay
+            muted
+            loop
+            playsInline
+          />
+        </div>
+      )}
+
       <div className={styles.content} style={{ maxWidth: maxWidth }}>
         {header && <span className={styles.header}>{header}</span>}
         {title && <h2 className={styles.title}>{title}</h2>}
@@ -26,7 +46,7 @@ const Hero = (props) => {
         {ctaText && (
           <Button
             className={`${styles.ctaButton} ${ctaStyle}`}
-            level={'primary'}
+            level={"primary"}
             onClick={ctaAction}
           >
             {ctaText}

@@ -1,6 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+@import url("https://use.typekit.net/tpy2mps.css");
+
+@font-face {
+  font-family: 'Sharkbit';
+  src: url('../../assets/Sharkbit-demo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /**
  *
  Font weight references:
@@ -27,11 +36,13 @@
   --small: 600px;
   --medium: 1000px;
   --large: 1300px;
-  --standard-header: 'Yeseva One', serif;
-  --standard-font: 'Yeseva One', sans-serif;
+  --logo-font: 'Sharkbit', serif;
+  --standard-header: 'gardein', serif;
+  --standard-font: 'Proxima Nova', sans-serif;
   --brand-font: 'Yeseva One', cursive;
   --standard-black: #000000;
   --standard-white: #ffffff;
+  --brand-poppy: #f48125;
   --standard-grey: #e2e2e2;
   --standard-dark-grey: #545250;
   --standard-light-grey: #FCFAF6;

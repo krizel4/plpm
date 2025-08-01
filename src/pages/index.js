@@ -11,20 +11,26 @@ const IndexPage = () => {
   return (
     <Layout disablePaddingBottom hideNav hideFooter>
       <Hero
-        maxWidth={'500px'}
-        image={'https://images.ctfassets.net/xuyebjupxu9b/6uPkrUykcG2pZlJ418JsFI/34cd32316bf3060d14a86e03228a4f19/Pretty-little-poppy-marketplace-Lancaster-ca-antelope-valley.png'}
-        title={`We're on the Internet! \n Excuse our digital dust. \n Visit us again August '25.`}
+        video={
+          "https://videos.ctfassets.net/xuyebjupxu9b/72OvQuEdJ6iIkvtw6EKK9K/008c4f3406edc4fdf9da2004532501f5/pretty-little-poppy-marketplace-lancaster-ca.mp4"
+        }
+        title={"Pretty Little Poppy is Sprouting Soon!"}
+        subtitle={
+          <>
+            Launching 8/8! <br /> Until then, stop by our store to support AV's
+            finest creators and makers.
+          </>
+        }
+        ctaText={
+          <a
+            href="https://www.instagram.com/prettylittlepoppy.av/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Get Updates from Instagram
+          </a>
+        }
       />
-      {/* <div className={styles.messageContainer}>
-        <p>
-          This is a demonstration of the Sydney theme for verse by{' '}
-          <span className={styles.gold}>matter design.</span>
-        </p>
-        <p>
-          wear by <span className={styles.gold}>sunspel</span> and{' '}
-          <span className={styles.gold}>scotch&soda</span>
-        </p>
-      </div> */}
     </Layout>
   );
 };

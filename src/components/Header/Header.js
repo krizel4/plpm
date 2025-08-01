@@ -27,11 +27,11 @@ const Header = (prop) => {
   const [search, setSearch] = useState('');
 
   const searchRef = createRef();
-  const bannerMessage = 'Free shipping worldwide';
+  const bannerMessage = 'PROUDLY LOCATED IN ANTELOPE VALLEY, CA';
   const searchSuggestions = [
-    'Oversize sweaters',
-    'Lama Pajamas',
-    'Candles Cinnamon',
+    'Vendor Directory',
+    'Upcoming Events',
+    'Minors to Majors Program',
   ];
 
   const handleHover = (navObject) => {
