@@ -68,7 +68,7 @@ const SupportPage = (props) => {
 
   return (
     <Layout disablePaddingBottom>
-      <div className={styles.root}>
+      <div>
         <Banner
           maxWidth={'650px'}
           name={current.title}
