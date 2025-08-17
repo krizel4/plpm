@@ -1,10 +1,9 @@
 import React, { useRef } from 'react'
 
 import Layout from '../components/Layout/Layout'
-import Contact from '../components/Contact'
 import Hero from '../components/Hero'
 
-import * as styles from '../components/Contact/contact.module.css'
+import * as styles from '../components/Contact/Contact.module.css'
 
 const ContactPage = () => {
   return (
