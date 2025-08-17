@@ -28,12 +28,21 @@
     "gatsby-source-contentful": "^8.15.0",
     "gatsby-transformer-sharp": "^5.14.0",
     "graphql-http": "^1.22.4",
+    "netlify-cli": "^23.1.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-slick": "^0.30.2"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.39.1",
+    "@typescript-eslint/parser": "^8.39.1",
+    "eslint": "^8.57.1",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.6.0",
+    "eslint-plugin-react": "^7.37.5",
     "plop": "^3.0.5",
     "prettier": "^3.2.5"
   }
