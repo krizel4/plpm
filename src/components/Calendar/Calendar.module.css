@@ -1,24 +1,30 @@
-/* .fc .fc-toolbar.fc-header-toolbar {
-    padding: 17px 0;
+:global(.fc .fc-toolbar-title) {
+    color: var(--brand-poppy);
+}
+
+.fc-h-event {
+    background-color: var(--brand-poppy);
+}
+
+.sharedContainer {
+    display: block;
+    margin: 0 auto;
+    max-width: 400px;
+    width: 100%;
 }
 
 .calendarWrapper {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 100%;
     align-items: center;
-    height: auto;
-    padding: 5%;
-}
-.calendarContainer {
-    max-width: 900px;
-    height: auto;
-    transform-origin: center;
 }
 
-.fc .fc-daygrid-day-frame {
-    min-height: 80px;
-} */
-
-.fc-h-event {
-    background-color: orange !important;
+.hidden {
+    display: none;
 }

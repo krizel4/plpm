@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
 @import url("https://use.typekit.net/tpy2mps.css");
 
 @font-face {
@@ -10,19 +7,10 @@
   font-style: normal;
 }
 
-/**
- *
- Font weight references:
+html {
+  scroll-behavior: smooth;
+}
 
- Regular: 400;
- Medium: 500;
- Semi-bold: 600;
- Bold: 700;
- Extra-bold: 800;
- *
- */
-
-/* Variables */
 :root {
   --space1: 3px;
   --space2: 5px;
@@ -37,15 +25,18 @@
   --medium: 1000px;
   --large: 1300px;
   --logo-font: 'Sharkbit', serif;
-  --standard-header: 'Gopher', serif;
-  --standard-font: 'Proxima Nova', sans-serif;
-  --brand-font: 'Yeseva One', cursive;
-  --standard-black: #000000;
+  --standard-header: Neulis-Cursive, cursive;
+  --standard-subheader: quincy-cf, serif;
+  --standard-font: fieldwork, sans-serif;
   --standard-white: #ffffff;
-  --brand-poppy: #f48125;
+  --brand-poppy: #cd6325;
   --standard-grey: #e2e2e2;
-  --standard-dark-grey: #545250;
+  --standard-dark-blue: #5a778f;
   --standard-light-grey: #FCFAF6;
+  --secondary-brand-color: #8b1f0d;
+  --tertiary-brand-color: #c8955c;
+  --light-accent-brand-color: #79783d;
+  --dark-accent-brand-color: #2f3217;
   --grey-passthough: #979797;
   --grey-border: #A9A9A8;
   --grey-placeholder: #716868;
@@ -113,6 +104,10 @@ html, body {
   user-select: none;
 }
 
+.container {
+  padding: 0 10%;
+}
+
 h1,
 .h1 {
   font-family: var(--standard-header);
@@ -142,7 +137,7 @@ h4,
   font-family: var(--standard-header);
   font-size: 32px;
   line-height: 37px;
-  margin: 0;
+  margin: 2% 0;
 }
 
 h5,
@@ -194,6 +189,7 @@ p {
   font-weight: 600;
 }
 
+
 @media only screen and (max-width: 767px) {
   h1,
   .h1 {
@@ -224,6 +220,12 @@ p {
   .h6 {
     font-size: 20px;
   }
+}
+
+.instagram-media .Feedback,
+.instagram-media .SocialProof,
+.instagram-media .Embed .Caption {
+  display: none !important;
 }
 
 @media only screen and (max-width: 480px) {

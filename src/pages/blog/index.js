@@ -16,54 +16,20 @@ const BlogPage = (props) => {
 
   return (
     <Layout disablePaddingBottom>
-      <div className={styles.root}>
-        <Hero
-          maxWidth={'400px'}
-          image={toOptimizedImage('/blogCover.png')}
-          title={`The new standard of Closing`}
-          ctaLink={'read story'}
-          ctaTo={'/blog/sample'}
-          header={'design'}
-        />
+      <div className={styles.blogContainer}>
+        <div className={styles.content}>
+          <h3>Our Blog is Blooming Soon!</h3>
+          <p>
+            We’re getting ready to fill this space with resources, tips, and
+            ideas to help small businesses thrive—whether you’re selling from a
+            shelf, at a pop-up, or building your brand from scratch.{" "}
+          </p>
 
-        <div className={styles.navContainer}>
-          <ThemeLink
-            onClick={() => navigate('/blog/sample')}
-            to={'/blog/sample'}
-          >
-            All Posts
-          </ThemeLink>
-          <ThemeLink
-            onClick={() => navigate('/blog/sample')}
-            to={'/blog/sample'}
-          >
-            Design
-          </ThemeLink>
-          <ThemeLink
-            onClick={() => navigate('/blog/sample')}
-            to={'/blog/sample'}
-          >
-            Collaboration
-          </ThemeLink>
-          <ThemeLink
-            onClick={() => navigate('/blog/sample')}
-            to={'/blog/sample'}
-          >
-            Interview
-          </ThemeLink>
-          <ThemeLink
-            onClick={() => navigate('/blog/sample')}
-            to={'/blog/sample'}
-          >
-            News
-          </ThemeLink>
-        </div>
+          <p>
+            From marketing know-how to vendor hacks, we’ve got you covered.{" "}
+          </p>
 
-        {/* Blog Grid */}
-        <div className={styles.blogsContainer}>
-          <Container size={'large'}>
-            <BlogPreviewGrid data={blogData} hideReadMoreOnWeb showExcerpt />
-          </Container>
+          <p>Check back soon for fresh content designed to help you grow.</p>
         </div>
       </div>
     </Layout>

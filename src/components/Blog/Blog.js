@@ -17,12 +17,9 @@ const Blog = (props) => {
         <img src={toOptimizedImage(image)} alt={alt} />
       </div>
       <div>{children}</div>
-      <div className={styles.footerContainer}>
+      {/* <div className={styles.footerContainer}>
         <span>Share with:</span>
         <div className={styles.socialMediaListContainer}>
-          <div className={styles.socialMediaIconContainer}>
-            <Icon symbol={'twitterinverse'}></Icon>
-          </div>
           <div className={styles.socialMediaIconContainer}>
             <Icon symbol={'facebookinverse'}></Icon>
           </div>
@@ -33,7 +30,7 @@ const Blog = (props) => {
         <Button onClick={() => navigate('/blog')} level={'secondary'}>
           back to blog
         </Button>
-      </div>
+      </div> */}
     </div>
   );
 };

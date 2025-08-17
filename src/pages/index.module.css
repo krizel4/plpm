@@ -1,9 +1,48 @@
-.root {
-
+.generalContainer {
+    margin-top: 5%;
+    padding-left: 15%;
+    padding-right: 15%;
 }
 
+hr {
+    border: 4px solid var(--brand-poppy);
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.divColumns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.primary {
+    display: block;
+    text-align: center;
+}
+
+.responsiveImg {
+    width: 100%;
+    height: auto;
+    padding: 5%;
+}
+
+.sharedContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
 .collectionContainer {
     margin-top: 8px;
+}
+
+.calendarContainer {
+    flex: 1 1 50%;
 }
 
 .promotionContainer {
@@ -14,7 +53,6 @@
     font-size: 52px;
     line-height: 62px;
 }
-
 
 .messageContainer {
     text-align: center;
@@ -40,10 +78,6 @@
     font-size: 42px;
     line-height: 50px;
     margin-bottom: 16px;
-}
-
-.newArrivalsContainer {
-    margin-top: 64px;
 }
 
 .highlightContainer {
@@ -78,10 +112,6 @@
     border-bottom: 1px solid var(--standard-gold);
 }
 
-.blogsContainer {
-    margin-top: 96px;
-}
-
 .sustainableContainer {
     margin: 96px 40px 0px 40px;
 }
@@ -100,7 +130,8 @@
     object-fit: cover;
 }
 
-@media (max-width: 800px) {
+/* TABLETS */
+@media (max-width: 1024px) {
     .sustainableContainer {
         margin: 96px 0px 0px 0px;
     }
@@ -111,5 +142,18 @@
 
     .highlightContainer {
         margin: 88px 0px 40px 0px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 460px) {
+    .divColumns {
+        grid-template-columns: 1fr;
+        width: 100%;
+        padding: 5% 0;
+    }
+
+    .responsiveImg {
+        padding: 5% 0;
     }
 }

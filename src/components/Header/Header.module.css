@@ -1,9 +1,23 @@
 .root {
-    position: fixed;
     width: 100%;
     background-color: var(--standard-white);
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
     z-index: 50;
+}
+
+.logo {
+    width: 100%;
+    max-width: 5px;
+}
+.header {
+    display: flex;
+    align-items: center;
+    padding: 25px 0px;
+    justify-content: space-around;
+    margin: 0 auto;
+    white-space: nowrap;
+    top: 0;
+    scrollbar-width: none;
 }
 
 .iconButton {
@@ -18,13 +32,7 @@
   -webkit-appearance: button;
 }
 
-.header {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    padding: 48px 0px 48px 0px;
-    margin: 0 auto;
-}
+
 
 .headerMessageContainer {
     background-color: var(--bg-grey);
@@ -50,12 +58,12 @@
     text-transform: uppercase;
     color: var(--standard-black);
     font-weight: 500;
-    padding-bottom: 50px;
     font-size: 12px;
     line-height: 15px;
     border-bottom: 2px solid transparent;
     transition: border 0.3s ease-in-out;
     width: 100%;
+    z-index: inherit;
 }
 
 .activeLink {
@@ -91,7 +99,6 @@
     position: absolute;
     background-color: var(--standard-white);
     width: 100%;
-
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease-in-out;
@@ -195,12 +202,10 @@
     position: absolute;
     bottom: -5px;
     right: -5px;
-
     width: 14px;
     height: 14px;
     background-color: var(--standard-gold);
     border-radius: 50%;
-
     display: flex;
     align-items: center;
     justify-content: center;

@@ -6,9 +6,12 @@ import * as styles from './FormInputField.module.css';
 const FormInputField = React.forwardRef((props, ref) => {
   const {
     id,
-    type = 'text',
+    type = "text",
     labelName,
-    value,
+    value, 
+    options = [], 
+    multiple = false,
+    size, 
     pattern,
     min,
     max,
@@ -25,10 +28,10 @@ const FormInputField = React.forwardRef((props, ref) => {
     <div className={`formField ${styles.formField}`}>
       {labelName !== undefined && (
         <label htmlFor={id} className={styles.label}>
-          {labelName} {required === true ? <span>*</span> : ''}
+          {labelName} {required === true ? <span>*</span> : ""}
         </label>
       )}
-      {(type === 'text' || type === 'input') && (
+      {(type === "text" || type === "input") && (
         <input
           id={id}
           name={id}
@@ -37,14 +40,14 @@ const FormInputField = React.forwardRef((props, ref) => {
           pattern={pattern}
           placeholder={placeholder}
           className={`${styles.input} ${
-            icon ? styles.conditionalIconPadding : ''
-          } ${error && error ? styles.fieldRequired : ''}`}
+            icon ? styles.conditionalIconPadding : ""
+          } ${error && error ? styles.fieldRequired : ""}`}
           onChange={(e) => handleChange(id, e.target.value)}
           disabled={disabled}
           ref={ref}
         />
       )}
-      {type === 'number' && (
+      {type === "number" && (
         <input
           id={id}
           name={id}
@@ -55,14 +58,14 @@ const FormInputField = React.forwardRef((props, ref) => {
           pattern={pattern}
           placeholder={placeholder}
           className={`${styles.input} ${
-            icon ? styles.conditionalIconPadding : ''
-          } ${error && error ? styles.fieldRequired : ''}`}
+            icon ? styles.conditionalIconPadding : ""
+          } ${error && error ? styles.fieldRequired : ""}`}
           onChange={(e) => handleChange(id, e.target.value)}
           disabled={disabled}
           ref={ref}
         />
       )}
-      {type === 'password' && (
+      {type === "password" && (
         <input
           id={id}
           name={id}
@@ -71,14 +74,14 @@ const FormInputField = React.forwardRef((props, ref) => {
           placeholder={placeholder}
           pattern={pattern}
           className={`${styles.input} ${
-            icon ? styles.conditionalIconPadding : ''
-          } ${error && error ? styles.fieldRequired : ''}`}
+            icon ? styles.conditionalIconPadding : ""
+          } ${error && error ? styles.fieldRequired : ""}`}
           onChange={(e) => handleChange(id, e.target.value)}
           disabled={disabled}
           required={required}
         />
       )}
-      {type === 'email' && (
+      {type === "email" && (
         <input
           id={id}
           name={id}
@@ -87,33 +90,79 @@ const FormInputField = React.forwardRef((props, ref) => {
           pattern={pattern}
           placeholder={placeholder}
           className={`${styles.input} ${
-            icon ? styles.conditionalIconPadding : ''
-          } ${error && error ? styles.fieldRequired : ''}`}
+            icon ? styles.conditionalIconPadding : ""
+          } ${error && error ? styles.fieldRequired : ""}`}
           onChange={(e) => handleChange(id, e.target.value)}
           disabled={disabled}
           ref={ref}
         />
       )}
-      {type === 'textarea' && (
+      {type === "textarea" && (
         <textarea
           id={id}
           name={id}
           value={value}
           pattern={pattern}
           className={`${styles.textarea} ${
-            icon ? styles.conditionalIconPadding : ''
-          } ${error ? styles.fieldRequired : ''}`}
+            icon ? styles.conditionalIconPadding : ""
+          } ${error ? styles.fieldRequired : ""}`}
           onChange={(e) => handleChange(id, e.target.value)}
           disabled={disabled}
           ref={ref}
         />
       )}
+      {type === "select" && (
+        <select
+          id={id}
+          name={multiple ? `${id}[]` : id} // helpful if backend expects arrays
+          multiple={multiple}
+          size={multiple ? size || 5 : undefined}
+          value={multiple ? value || [] : (value ?? "")}
+          className={`${styles.select ?? styles.input} ${
+            icon ? styles.conditionalIconPadding : ""
+          } ${error ? styles.fieldRequired : ""}`}
+          onChange={(e) => {
+            if (multiple) {
+              const vals = Array.from(e.target.selectedOptions).map(
+                (o) => o.value
+              );
+              handleChange(id, vals);
+            } else {
+              handleChange(id, e.target.value);
+            }
+          }}
+          disabled={disabled}
+          ref={ref}
+          required={required}
+        >
+          {!multiple && placeholder && (
+            <option value="" disabled hidden>
+              {placeholder}
+            </option>
+          )}
+          {options.map((opt) =>
+            Array.isArray(opt.options) ? (
+              <optgroup key={opt.label} label={opt.label}>
+                {opt.options.map((o) => (
+                  <option key={o.value} value={o.value}>
+                    {o.label ?? o.value}
+                  </option>
+                ))}
+              </optgroup>
+            ) : (
+              <option key={opt.value} value={opt.value}>
+                {opt.label ?? opt.value}
+              </option>
+            )
+          )}
+        </select>
+      )}
       {note && <span className={styles.note}>{note}</span>}
-      {error && <span className={'error'}>{error}</span>}
+      {error && <span className={"error"}>{error}</span>}
       {icon && (
         <div
           className={`${styles.iconContainer} ${
-            labelName !== undefined ? styles.offsetIcon : ''
+            labelName !== undefined ? styles.offsetIcon : ""
           }`}
         >
           <Icon symbol={icon} />

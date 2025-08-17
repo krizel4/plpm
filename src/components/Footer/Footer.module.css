@@ -1,5 +1,5 @@
 .root {
-    background-color: var(--bg-dark);
+    background-color: var(--tertiary-brand-color);
     padding-bottom: 50px;
 }
 
@@ -28,22 +28,24 @@
 
 .linkList {
     list-style-type: none;
-    margin: 0;
+    margin-top: 15px;
     padding: 0;
     font-size: 14px;
 }
 
-.link{
+.link {
     color: var(--standard-white);
-    margin-bottom: 12px;
     display: inline-block;
 }
 
 .linkTitle {
     font-size: 18px;
-    margin-bottom: 24px;
-    display: block;
     color: var(--standard-white);
+    background: linear-gradient(180deg,
+            rgba(255, 255, 255, 0) 50%,
+            #cd6325 50%);
+    /* Adjust color as desired */
+    display: inline;
 }
 
 .link::after {
@@ -61,12 +63,13 @@
 
 .promoMessage {
     color: var(--standard-white);
-    justify-self: end;
+    line-height: 1.6em;
+    margin-top: 15px;
 }
 
 .newsLetterForm {
     margin-top: 38px;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
 }
 
 .socialContainer {
@@ -92,8 +95,9 @@
 }
 
 .socialIconContainer svg {
-    width: 16px;
-    height: 16px;
+    width: 25px;
+    height: 25px;
+    color: var(--light-accent-brand-color);
 }
 
 .contentBottomContainer {
