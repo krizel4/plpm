@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
-import { navigate } from 'gatsby';
-import * as styles from './404.module.css';
+import React, { useState } from 'react'
+import { navigate } from 'gatsby'
+import * as styles from './404.module.css'
 
-import Button from '../components/Button';
-import Container from '../components/Container';
-import FormInputField from '../components/FormInputField/FormInputField';
-import Layout from '../components/Layout';
+import Button from '../components/Button'
+import Container from '../components/Container'
+import FormInputField from '../components/FormInputField/FormInputField'
+import Layout from '../components/Layout'
 
 const NotFoundPage = () => {
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState('')
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    navigate(`/search?q=${search}`);
-  };
+    e.preventDefault()
+    navigate(`/search?q=${search}`)
+  }
 
   return (
     <Layout disablePaddingBottom>
@@ -41,7 +41,7 @@ const NotFoundPage = () => {
         </div>
       </Container>
     </Layout>
-  );
-};
+  )
+}
 
-export default NotFoundPage;
+export default NotFoundPage

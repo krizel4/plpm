@@ -1,71 +1,71 @@
-import React, { useState } from 'react';
-import { Link, navigate } from 'gatsby';
-import { validateEmail, isEmpty } from '../helpers/general';
-import * as styles from './login.module.css';
+import React, { useState } from 'react'
+import { Link, navigate } from 'gatsby'
+import { validateEmail, isEmpty } from '../helpers/general'
+import * as styles from './login.module.css'
 
-import AttributeGrid from '../components/AttributeGrid/AttributeGrid';
-import Layout from '../components/Layout/Layout';
-import FormInputField from '../components/FormInputField/FormInputField';
-import Button from '../components/Button';
+import AttributeGrid from '../components/AttributeGrid/AttributeGrid'
+import Layout from '../components/Layout/Layout'
+import FormInputField from '../components/FormInputField/FormInputField'
+import Button from '../components/Button'
 
 const LoginPage = (props) => {
   const initialState = {
     email: '',
-    password: '',
-  };
+    password: ''
+  }
 
   const errorState = {
     email: '',
-    password: '',
-  };
+    password: ''
+  }
 
-  const [loginForm, setLoginForm] = useState(initialState);
-  const [errorForm, setErrorForm] = useState(errorState);
-  const [errorMessage, setErrorMessage] = useState('');
+  const [loginForm, setLoginForm] = useState(initialState)
+  const [errorForm, setErrorForm] = useState(errorState)
+  const [errorMessage, setErrorMessage] = useState('')
 
   const handleChange = (id, e) => {
-    const tempForm = { ...loginForm, [id]: e };
-    setLoginForm(tempForm);
-  };
+    const tempForm = { ...loginForm, [id]: e }
+    setLoginForm(tempForm)
+  }
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    let validForm = true;
-    const tempError = { ...errorForm };
+    e.preventDefault()
+    let validForm = true
+    const tempError = { ...errorForm }
 
     if (validateEmail(loginForm.email) !== true) {
       tempError.email =
-        'Please use a valid email address, such as user@example.com.';
-      validForm = false;
+        'Please use a valid email address, such as user@example.com.'
+      validForm = false
     } else {
-      tempError.email = '';
+      tempError.email = ''
     }
 
     if (isEmpty(loginForm.password) === true) {
-      tempError.password = 'Field required';
-      validForm = false;
+      tempError.password = 'Field required'
+      validForm = false
     } else {
-      tempError.password = '';
+      tempError.password = ''
     }
 
     if (validForm === true) {
-      setErrorForm(errorState);
+      setErrorForm(errorState)
 
-      //mock login
+      // mock login
       if (loginForm.email !== 'error@example.com') {
-        navigate('/account');
-        window.localStorage.setItem('key', 'sampleToken');
+        navigate('/account')
+        window.localStorage.setItem('key', 'sampleToken')
       } else {
-        window.scrollTo(0, 0);
+        window.scrollTo(0, 0)
         setErrorMessage(
           'There is no such account associated with this email address'
-        );
+        )
       }
     } else {
-      setErrorMessage('');
-      setErrorForm(tempError);
+      setErrorMessage('')
+      setErrorForm(tempError)
     }
-  };
+  }
 
   return (
     <Layout disablePaddingBottom={true}>
@@ -131,7 +131,7 @@ const LoginPage = (props) => {
         </div>
       </div>
     </Layout>
-  );
-};
+  )
+}
 
-export default LoginPage;
+export default LoginPage

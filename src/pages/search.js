@@ -1,20 +1,20 @@
-import React from 'react';
-import { parse } from 'query-string';
+import React from 'react'
+import { parse } from 'query-string'
 
-import Breadcrumbs from '../components/Breadcrumbs';
-import Layout from '../components/Layout/Layout';
-import Container from '../components/Container/Container';
-import ProductCardGrid from '../components/ProductCardGrid';
+import Breadcrumbs from '../components/Breadcrumbs'
+import Layout from '../components/Layout/Layout'
+import Container from '../components/Container/Container'
+import ProductCardGrid from '../components/ProductCardGrid'
 
-import { generateMockProductData } from '../helpers/mock';
+import { generateMockProductData } from '../helpers/mock'
 
-import * as styles from './search.module.css';
+import * as styles from './search.module.css'
 
 const SearchPage = (props) => {
-  const params = parse(props.location.search);
-  const searchQuery = params.q ? params.q : '';
+  const params = parse(props.location.search)
+  const searchQuery = params.q ? params.q : ''
 
-  const sampleData = generateMockProductData(3, 'woman');
+  const sampleData = generateMockProductData(3, 'woman')
 
   return (
     <Layout>
@@ -23,7 +23,7 @@ const SearchPage = (props) => {
           <Breadcrumbs
             crumbs={[
               { link: '/', label: 'Home' },
-              { label: `Search results for '${searchQuery}'` },
+              { label: `Search results for '${searchQuery}'` }
             ]}
           />
           <div className={styles.searchLabels}>
@@ -39,7 +39,7 @@ const SearchPage = (props) => {
         </Container>
       </div>
     </Layout>
-  );
-};
+  )
+}
 
-export default SearchPage;
+export default SearchPage

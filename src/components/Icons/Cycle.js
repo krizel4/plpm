@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const Cycle = () => (
   <svg
@@ -21,6 +21,6 @@ const Cycle = () => (
       strokeWidth={0.4}
     />
   </svg>
-);
+)
 
-export default Cycle;
+export default Cycle

@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import * as styles from './ProductCardGrid.module.css';
+import React, { useState } from 'react'
+import * as styles from './ProductCardGrid.module.css'
 
-import Drawer from '../Drawer';
-import ProductCard from '../ProductCard';
-import QuickView from '../QuickView';
-import Slider from '../Slider';
+import Drawer from '../Drawer'
+import ProductCard from '../ProductCard'
+import QuickView from '../QuickView'
+import Slider from '../Slider'
 
 const ProductCardGrid = (props) => {
-  const [showQuickView, setShowQuickView] = useState(false);
-  const { height, columns = 3, data, spacing, showSlider = false } = props;
+  const [showQuickView, setShowQuickView] = useState(false)
+  const { height, columns = 3, data, spacing, showSlider = false } = props
   const columnCount = {
-    gridTemplateColumns: `repeat(${columns}, 1fr)`,
-  };
+    gridTemplateColumns: `repeat(${columns}, 1fr)`
+  }
 
   const renderCards = () => {
     return data.map((product, index) => {
@@ -28,9 +28,9 @@ const ProductCardGrid = (props) => {
           link={product.link}
           showQuickView={() => setShowQuickView(true)}
         />
-      );
-    });
-  };
+      )
+    })
+  }
 
   return (
     <div className={styles.root} style={columnCount}>
@@ -53,7 +53,7 @@ const ProductCardGrid = (props) => {
         <QuickView close={() => setShowQuickView(false)} />
       </Drawer>
     </div>
-  );
-};
+  )
+}
 
-export default ProductCardGrid;
+export default ProductCardGrid

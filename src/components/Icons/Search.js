@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const Search = () => (
   <svg
@@ -15,6 +15,6 @@ const Search = () => (
       stroke="currentColor"
     />
   </svg>
-);
+)
 
-export default Search;
+export default Search

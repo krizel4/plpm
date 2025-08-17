@@ -1,28 +1,28 @@
-import React, { useState } from 'react';
-import { Link, navigate } from 'gatsby';
+import React, { useState } from 'react'
+import { Link, navigate } from 'gatsby'
 
-import Config from '../../config.json';
-import Icon from '../Icons/Icon';
-import { isAuth } from '../../helpers/general';
+import Config from '../../config.json'
+import Icon from '../Icons/Icon'
+import { isAuth } from '../../helpers/general'
 
-//TO DO: refactor this to handle multiple nested links to avoid hardcoding 'depth'
+// TO DO: refactor this to handle multiple nested links to avoid hardcoding 'depth'
 // have to restructure config.json
 // refactor this
 
-import * as styles from './MobileNavigation.module.css';
+import * as styles from './MobileNavigation.module.css'
 
 const MobileNavigation = (props) => {
-  const { close } = props;
+  const { close } = props
 
-  const [subMenu, setSubMenu] = useState();
-  const [category, setCategory] = useState();
-  const [depth, setDepth] = useState(0);
+  const [subMenu, setSubMenu] = useState()
+  const [category, setCategory] = useState()
+  const [depth, setDepth] = useState(0)
 
   const handleLogout = () => {
-    window.localStorage.removeItem('key');
-    navigate('/');
-    close();
-  };
+    window.localStorage.removeItem('key')
+    navigate('/')
+    close()
+  }
 
   return (
     <div className={styles.root}>
@@ -92,7 +92,7 @@ const MobileNavigation = (props) => {
             <div>
               {Config.headerLinks.map((navObject) => {
                 const hasSubmenu =
-                  navObject.category?.length !== undefined ? true : false;
+                  navObject.category?.length !== undefined
                 return (
                   <Link
                     key={navObject.menuLink}
@@ -100,15 +100,15 @@ const MobileNavigation = (props) => {
                     to={hasSubmenu === true ? '' : navObject.menuLink}
                     onClick={() => {
                       if (hasSubmenu) {
-                        setDepth(1);
-                        setCategory(navObject);
+                        setDepth(1)
+                        setCategory(navObject)
                       }
                     }}
                   >
                     {navObject.menuLabel}
                     {hasSubmenu && <Icon symbol={'caret'}></Icon>}
                   </Link>
-                );
+                )
               })}
               <div className={styles.navFooter}>
                 <Link to={'/favorites'}>
@@ -126,15 +126,15 @@ const MobileNavigation = (props) => {
                   key={menuItem.categoryLabel}
                   to={''}
                   onClick={() => {
-                    setDepth(2);
-                    setSubMenu(menuItem);
+                    setDepth(2)
+                    setSubMenu(menuItem)
                   }}
                   className={`${styles.mobileLink}`}
                 >
                   {menuItem.categoryLabel}
                   <Icon symbol={'caret'}></Icon>
                 </Link>
-              );
+              )
             })}
 
           {depth === 2 &&
@@ -147,7 +147,7 @@ const MobileNavigation = (props) => {
                 >
                   {menuItem.menuLabel}
                 </Link>
-              );
+              )
             })}
 
           {depth === -1 && (
@@ -181,7 +181,7 @@ const MobileNavigation = (props) => {
         </div>
       </nav>
     </div>
-  );
-};
+  )
+}
 
-export default MobileNavigation;
+export default MobileNavigation

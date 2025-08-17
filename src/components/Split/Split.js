@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 
-import Button from '../Button';
-import * as styles from './Split.module.css';
-import { toOptimizedImage } from '../../helpers/general';
+import Button from '../Button'
+import * as styles from './Split.module.css'
+import { toOptimizedImage } from '../../helpers/general'
 
 const Split = (props) => {
-  const { image, alt, title, description, ctaText, cta, bgColor } = props;
+  const { image, alt, title, description, ctaText, cta, bgColor } = props
   return (
     <div className={styles.root}>
       <div
@@ -24,7 +24,7 @@ const Split = (props) => {
         <img src={toOptimizedImage(image)} alt={alt}></img>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Split;
+export default Split

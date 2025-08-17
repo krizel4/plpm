@@ -1,1 +1,1 @@
-export { default } from './BlogPreview';
+export { default } from './BlogPreview'

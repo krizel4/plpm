@@ -1,1 +1,1 @@
-export { default } from './ThemeLink';
+export { default } from './ThemeLink'

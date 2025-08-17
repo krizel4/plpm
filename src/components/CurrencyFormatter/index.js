@@ -1,1 +1,1 @@
-export { default } from './CurrencyFormatter';
+export { default } from './CurrencyFormatter'

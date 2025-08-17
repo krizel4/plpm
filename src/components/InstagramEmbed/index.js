@@ -1,1 +1,1 @@
-export { default } from './InstagramEmbed';
+export { default } from './InstagramEmbed'

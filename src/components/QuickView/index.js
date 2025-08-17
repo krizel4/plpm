@@ -1,1 +1,1 @@
-export { default } from './QuickView';
+export { default } from './QuickView'

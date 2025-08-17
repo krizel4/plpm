@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const Filter = () => (
   <svg
@@ -10,6 +10,6 @@ const Filter = () => (
   >
     <path stroke="currentColor" d="M0 2.5h20M3.5 0v5M20 9.5H0M16.5 7v5" />
   </svg>
-);
+)
 
-export default Filter;
+export default Filter

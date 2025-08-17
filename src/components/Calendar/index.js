@@ -1,10 +1,10 @@
 import React, { Component, createRef, PureComponent } from 'react'
 import { createPortal, flushSync } from 'react-dom'
 import {
-  Calendar,
+  Calendar
 } from '@fullcalendar/core'
 import {
-  CustomRenderingStore,
+  CustomRenderingStore
 } from '@fullcalendar/core/internal'
 
 const reactMajorVersion = parseInt(String(React.version).split('.')[0])
@@ -24,7 +24,7 @@ export default class FullCalendar extends Component {
     customRenderingMap: new Map()
   }
 
-  render() {
+  render () {
     const customRenderingNodes = []
 
     for (const customRendering of this.state.customRenderingMap.values()) {
@@ -43,7 +43,7 @@ export default class FullCalendar extends Component {
     )
   }
 
-  componentDidMount() {
+  componentDidMount () {
     this.isUnmounting = false
 
     const customRenderingStore = new CustomRenderingStore()
@@ -51,7 +51,7 @@ export default class FullCalendar extends Component {
 
     this.calendar = new Calendar(this.elRef.current, {
       ...this.props,
-      handleCustomRendering: this.handleCustomRendering,
+      handleCustomRendering: this.handleCustomRendering
     })
     this.calendar.render()
 
@@ -72,7 +72,8 @@ export default class FullCalendar extends Component {
         this.isUpdating ||
         this.isUnmounting ||
         (requestTimestamp - lastRequestTimestamp) < 100
-      ) ? runNow
+      )
+        ? runNow
         : flushSync
 
       runFunc(() => {
@@ -88,16 +89,16 @@ export default class FullCalendar extends Component {
     })
   }
 
-  componentDidUpdate() {
+  componentDidUpdate () {
     this.isUpdating = true
     this.calendar.resetOptions({
       ...this.props,
-      handleCustomRendering: this.handleCustomRendering,
+      handleCustomRendering: this.handleCustomRendering
     })
     this.isUpdating = false
   }
 
-  componentWillUnmount() {
+  componentWillUnmount () {
     this.isUnmounting = true
     this.cancelResize()
     this.calendar.destroy()
@@ -112,18 +113,18 @@ export default class FullCalendar extends Component {
     }
   }
 
-  doResize() {
+  doResize () {
     this.calendar.updateSize()
   }
 
-  cancelResize() {
+  cancelResize () {
     if (this.resizeId !== undefined) {
       cancelAnimationFrame(this.resizeId)
       this.resizeId = undefined
     }
   }
 
-  getApi() {
+  getApi () {
     return this.calendar
   }
 }
@@ -132,12 +133,12 @@ export default class FullCalendar extends Component {
 // -------------------------------------------------------------------------------------------------
 
 class CustomRenderingComponent extends PureComponent {
-  render() {
+  render () {
     const { customRendering } = this.props
     const { generatorMeta } = customRendering
-    const vnode = typeof generatorMeta === 'function' ?
-      generatorMeta(customRendering.renderProps) :
-      generatorMeta
+    const vnode = typeof generatorMeta === 'function'
+      ? generatorMeta(customRendering.renderProps)
+      : generatorMeta
 
     return createPortal(vnode, customRendering.containerEl)
   }
@@ -146,6 +147,6 @@ class CustomRenderingComponent extends PureComponent {
 // Util
 // -------------------------------------------------------------------------------------------------
 
-function runNow(f) {
+function runNow (f) {
   f()
 }

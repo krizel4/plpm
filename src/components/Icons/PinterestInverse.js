@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const PinterestInverse = () => (
   <svg
@@ -14,6 +14,6 @@ const PinterestInverse = () => (
       strokeWidth={2}
     />
   </svg>
-);
+)
 
-export default PinterestInverse;
+export default PinterestInverse

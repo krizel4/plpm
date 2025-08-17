@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import * as styles from './Container.module.css';
+import * as styles from './Container.module.css'
 
 const Container = ({ children, size, spacing, fullMobile }) => {
   return (
@@ -13,7 +13,7 @@ const Container = ({ children, size, spacing, fullMobile }) => {
     >
       {children}
     </div>
-  );
-};
+  )
+}
 
-export default Container;
+export default Container

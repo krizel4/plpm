@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const CreditCard = () => (
   <svg
@@ -13,6 +13,6 @@ const CreditCard = () => (
       fill="#000"
     />
   </svg>
-);
+)
 
-export default CreditCard;
+export default CreditCard

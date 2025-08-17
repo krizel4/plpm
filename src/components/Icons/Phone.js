@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const Phone = () => (
   <svg
@@ -13,6 +13,6 @@ const Phone = () => (
       fill="currentColor"
     />
   </svg>
-);
+)
 
-export default Phone;
+export default Phone

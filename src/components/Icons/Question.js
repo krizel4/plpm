@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const Question = () => (
   <svg
@@ -17,6 +17,6 @@ const Question = () => (
       fill="currentColor"
     />
   </svg>
-);
+)
 
-export default Question;
+export default Question

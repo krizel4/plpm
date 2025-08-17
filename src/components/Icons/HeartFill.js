@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const HeartFill = () => (
   <svg
@@ -13,6 +13,6 @@ const HeartFill = () => (
       fill="currentColor"
     />
   </svg>
-);
+)
 
-export default HeartFill;
+export default HeartFill

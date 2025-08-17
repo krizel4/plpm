@@ -1,7 +1,7 @@
-import { Link } from 'gatsby';
-import React from 'react';
-import * as styles from './Highlight.module.css';
-import { toOptimizedImage } from '../../helpers/general';
+import { Link } from 'gatsby'
+import React from 'react'
+import * as styles from './Highlight.module.css'
+import { toOptimizedImage } from '../../helpers/general'
 
 const Highlight = (props) => {
   const {
@@ -12,8 +12,8 @@ const Highlight = (props) => {
     title,
     description,
     textLink,
-    link,
-  } = props;
+    link
+  } = props
 
   return (
     <div className={styles.root}>
@@ -29,7 +29,7 @@ const Highlight = (props) => {
         ></img>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Highlight;
+export default Highlight

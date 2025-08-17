@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const Delivery = () => (
   <svg
@@ -18,6 +18,6 @@ const Delivery = () => (
       strokeWidth={2}
     />
   </svg>
-);
+)
 
-export default Delivery;
+export default Delivery

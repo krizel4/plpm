@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import { Link, navigate } from 'gatsby';
+import React, { useState } from 'react'
+import { Link, navigate } from 'gatsby'
 
-import Button from '../Button';
-import FormInputField from '../FormInputField/FormInputField';
-import CurrencyFormatter from '../CurrencyFormatter';
+import Button from '../Button'
+import FormInputField from '../FormInputField/FormInputField'
+import CurrencyFormatter from '../CurrencyFormatter'
 
-import * as styles from './OrderSummary.module.css';
+import * as styles from './OrderSummary.module.css'
 
 const OrderSummary = (props) => {
-  const [coupon, setCoupon] = useState('');
-  const [giftCard, setGiftCard] = useState('');
+  const [coupon, setCoupon] = useState('')
+  const [giftCard, setGiftCard] = useState('')
 
   return (
     <div className={styles.root}>
@@ -69,7 +69,7 @@ const OrderSummary = (props) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default OrderSummary;
+export default OrderSummary

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const List = () => (
   <svg
@@ -14,6 +14,6 @@ const List = () => (
       strokeWidth={2}
     />
   </svg>
-);
+)
 
-export default List;
+export default List

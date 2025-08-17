@@ -1,8 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect } from 'react';
+import React, { useEffect } from 'react'
 
-import Icon from '../Icons/Icon';
-import * as styles from './Drawer.module.css';
+import Icon from '../Icons/Icon'
+import * as styles from './Drawer.module.css'
 
 const Drawer = ({
   children,
@@ -10,26 +10,26 @@ const Drawer = ({
   close,
   top = '0px',
   isReverse = false,
-  hideCross = false,
+  hideCross = false
 }) => {
   useEffect(() => {
-    window.addEventListener('keydown', escapeHandler);
-    return () => window.removeEventListener('keydown', escapeHandler);
-  }, []);
+    window.addEventListener('keydown', escapeHandler)
+    return () => window.removeEventListener('keydown', escapeHandler)
+  }, [])
 
   const escapeHandler = (e) => {
-    if (e?.keyCode === undefined) return;
-    if (e.keyCode === 27) close();
-  };
+    if (e?.keyCode === undefined) return
+    if (e.keyCode === 27) close()
+  }
 
   const showStyle =
-    isReverse === true ? styles.showReverse : styles.showContent;
+    isReverse === true ? styles.showReverse : styles.showContent
   const hideStyle =
-    isReverse === true ? styles.hideReverse : styles.hideContent;
+    isReverse === true ? styles.hideReverse : styles.hideContent
 
   return (
     <div
-      style={{ top: top }}
+      style={{ top }}
       className={`
       ${styles.root} 
       ${visible === true ? styles.show : styles.hide}
@@ -60,7 +60,7 @@ const Drawer = ({
         {children}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Drawer;
+export default Drawer

@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import { navigate } from 'gatsby';
-import * as styles from './address.module.css';
+import React, { useState } from 'react'
+import { navigate } from 'gatsby'
+import * as styles from './address.module.css'
 
-import AccountLayout from '../../components/AccountLayout';
-import AddressCard from '../../components/AddressCard';
-import AddressForm from '../../components/AddressForm';
-import Breadcrumbs from '../../components/Breadcrumbs';
-import Icon from '../../components/Icons/Icon';
-import Layout from '../../components/Layout/Layout';
-import Modal from '../../components/Modal';
+import AccountLayout from '../../components/AccountLayout'
+import AddressCard from '../../components/AddressCard'
+import AddressForm from '../../components/AddressForm'
+import Breadcrumbs from '../../components/Breadcrumbs'
+import Icon from '../../components/Icons/Icon'
+import Layout from '../../components/Layout/Layout'
+import Modal from '../../components/Modal'
 
-import { isAuth } from '../../helpers/general';
-import Button from '../../components/Button';
+import { isAuth } from '../../helpers/general'
+import Button from '../../components/Button'
 
 const AddressPage = (props) => {
   const address1 = {
@@ -20,8 +20,8 @@ const AddressPage = (props) => {
     state: 'NSW',
     postal: '2000',
     country: 'Australia',
-    company: '',
-  };
+    company: ''
+  }
 
   const address2 = {
     name: 'John Doe',
@@ -29,15 +29,15 @@ const AddressPage = (props) => {
     state: 'NSW',
     postal: '2000',
     country: 'Australia',
-    company: 'Matter Design',
-  };
+    company: 'Matter Design'
+  }
 
-  const [addressList] = useState([address1, address2]);
-  const [showForm, setShowForm] = useState(false);
-  const [showDelete, setShowDelete] = useState(false);
+  const [addressList] = useState([address1, address2])
+  const [showForm, setShowForm] = useState(false)
+  const [showDelete, setShowDelete] = useState(false)
 
   if (isAuth() === false) {
-    navigate('/login');
+    navigate('/login')
   }
 
   return (
@@ -47,7 +47,7 @@ const AddressPage = (props) => {
           crumbs={[
             { link: '/', label: 'Home' },
             { link: '/account', label: 'Account' },
-            { link: '/account/address', label: 'Addresses' },
+            { link: '/account/address', label: 'Addresses' }
           ]}
         />
         <h1>Addresses</h1>
@@ -61,7 +61,7 @@ const AddressPage = (props) => {
                   showDeleteForm={() => setShowDelete(true)}
                   {...address}
                 />
-              );
+              )
             })}
             <div
               className={styles.addCard}
@@ -96,7 +96,7 @@ const AddressPage = (props) => {
         </div>
       </Modal>
     </Layout>
-  );
-};
+  )
+}
 
-export default AddressPage;
+export default AddressPage

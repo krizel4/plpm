@@ -1,5 +1,5 @@
-import React from 'react';
-import * as styles from './Policy.module.css';
+import React from 'react'
+import * as styles from './Policy.module.css'
 
 const Policy = (props) => {
   return (
@@ -101,7 +101,7 @@ const Policy = (props) => {
         </p>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Policy;
+export default Policy

@@ -1,20 +1,20 @@
-import React from 'react';
-import Helmet from 'react-helmet';
-import PropTypes from 'prop-types';
+import React from 'react'
+import Helmet from 'react-helmet'
+import PropTypes from 'prop-types'
 
-import Header from '../Header';
-import Footer from '../Footer';
-import * as styles from './Layout.module.css';
+import Header from '../Header'
+import Footer from '../Footer'
+import * as styles from './Layout.module.css'
 
 // CSS not modular here to provide global styles
-import './Globals.css';
+import './Globals.css'
 
 const Layout = ({
   props,
   children,
   disablePaddingBottom = false,
   hideNav = false,
-  hideFooter = false,
+  hideFooter = false
 }) => {
   return (
     <>
@@ -45,14 +45,14 @@ const Layout = ({
 
       {!hideFooter && <Footer />}
     </>
-  );
-};
+  )
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
   disablePaddingBottom: PropTypes.bool,
   hideNav: PropTypes.bool,
-  hideFooter: PropTypes.bool,
-};
+  hideFooter: PropTypes.bool
+}
 
-export default Layout;
+export default Layout

@@ -1,76 +1,76 @@
-import React, { useState } from 'react';
-import { navigate } from 'gatsby';
+import React, { useState } from 'react'
+import { navigate } from 'gatsby'
 import {
   validateEmail,
   validateStrongPassword,
-  isEmpty,
-} from '../helpers/general';
-import * as styles from './signup.module.css';
+  isEmpty
+} from '../helpers/general'
+import * as styles from './signup.module.css'
 
-import AttributeGrid from '../components/AttributeGrid/AttributeGrid';
-import Layout from '../components/Layout/Layout';
-import FormInputField from '../components/FormInputField/FormInputField';
-import Button from '../components/Button';
+import AttributeGrid from '../components/AttributeGrid/AttributeGrid'
+import Layout from '../components/Layout/Layout'
+import FormInputField from '../components/FormInputField/FormInputField'
+import Button from '../components/Button'
 
 const SignupPage = (props) => {
   const initialState = {
     firstName: '',
     lastName: '',
     email: '',
-    password: '',
-  };
+    password: ''
+  }
 
   const errorState = {
     firstName: '',
     lastName: '',
     email: '',
-    password: '',
-  };
+    password: ''
+  }
 
-  const [signupForm, setSignupForm] = useState(initialState);
-  const [errorForm, setErrorForm] = useState(errorState);
+  const [signupForm, setSignupForm] = useState(initialState)
+  const [errorForm, setErrorForm] = useState(errorState)
 
   const handleChange = (id, e) => {
-    const tempForm = { ...signupForm, [id]: e };
-    setSignupForm(tempForm);
-  };
+    const tempForm = { ...signupForm, [id]: e }
+    setSignupForm(tempForm)
+  }
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    let validForm = true;
-    const tempError = { ...errorState };
+    e.preventDefault()
+    let validForm = true
+    const tempError = { ...errorState }
 
     if (isEmpty(signupForm.firstName) === true) {
-      tempError.firstName = 'Field required';
-      validForm = false;
+      tempError.firstName = 'Field required'
+      validForm = false
     }
 
     if (isEmpty(signupForm.lastName) === true) {
-      tempError.lastName = 'Field required';
-      validForm = false;
+      tempError.lastName = 'Field required'
+      validForm = false
     }
 
     if (validateEmail(signupForm.email) !== true) {
       tempError.email =
-        'Please use a valid email address, such as user@example.com.';
-      validForm = false;
+        'Please use a valid email address, such as user@example.com.'
+      validForm = false
     }
 
     if (validateStrongPassword(signupForm.password) !== true) {
       tempError.password =
-        'Password must have at least 8 characters, 1 lowercase, 1 uppercase and 1 numeric character.';
-      validForm = false;
+        'Password must have at least 8 characters, 1 lowercase, 1 uppercase and 1 numeric character.'
+      validForm = false
     }
 
     if (validForm === true) {
-      setErrorForm(errorState);
-      navigate('/accountSuccess');
-      window.localStorage.setItem('key', 'sampleToken');
-      //create account endpoint
+      setErrorForm(errorState)
+      navigate('/accountSuccess')
+      window.localStorage.setItem('key', 'sampleToken')
+      // create account endpoint
     } else {
-      setErrorForm(tempError);
+      setErrorForm(tempError)
     }
-  };
+  }
 
   return (
     <Layout disablePaddingBottom={true}>
@@ -141,7 +141,7 @@ const SignupPage = (props) => {
         </div>
       </div>
     </Layout>
-  );
-};
+  )
+}
 
-export default SignupPage;
+export default SignupPage

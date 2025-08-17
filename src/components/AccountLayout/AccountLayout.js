@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-import AccountNav from '../AccountNav';
-import Container from '../Container';
+import AccountNav from '../AccountNav'
+import Container from '../Container'
 
-import * as styles from './AccountLayout.module.css';
+import * as styles from './AccountLayout.module.css'
 
 const AccountLayout = ({ children }) => {
   return (
@@ -15,7 +15,7 @@ const AccountLayout = ({ children }) => {
         </div>
       </Container>
     </div>
-  );
-};
+  )
+}
 
-export default AccountLayout;
+export default AccountLayout

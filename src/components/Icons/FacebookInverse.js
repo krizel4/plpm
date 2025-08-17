@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const FacebookInverse = () => (
   <svg
@@ -14,6 +14,6 @@ const FacebookInverse = () => (
       strokeWidth={2}
     />
   </svg>
-);
+)
 
-export default FacebookInverse;
+export default FacebookInverse

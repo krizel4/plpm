@@ -1,1 +1,1 @@
-export { default } from './MiniCart';
+export { default } from './MiniCart'

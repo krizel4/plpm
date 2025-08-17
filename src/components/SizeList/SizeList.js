@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react'
 
-import BoxOption from '../BoxOption';
-import * as styles from './SizeList.module.css';
+import BoxOption from '../BoxOption'
+import * as styles from './SizeList.module.css'
 
 const SizeList = (props) => {
-  const { sizeList, setActiveSize, activeSize } = props;
+  const { sizeList, setActiveSize, activeSize } = props
   return (
     <div className={styles.root}>
       <div className={styles.sizeLabelContainer}>
@@ -20,11 +20,11 @@ const SizeList = (props) => {
               setActive={setActiveSize}
               isActive={activeSize === sizeOption}
             />
-          );
+          )
         })}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SizeList;
+export default SizeList

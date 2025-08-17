@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
-import Drawer from '../Drawer';
-import QuickView from '../QuickView';
+import Drawer from '../Drawer'
+import QuickView from '../QuickView'
 
-import * as styles from './FavoriteCard.module.css';
-import { toOptimizedImage } from '../../helpers/general';
+import * as styles from './FavoriteCard.module.css'
+import { toOptimizedImage } from '../../helpers/general'
 
 const FavoriteCard = (props) => {
-  const [showQuickView, setShowQuickView] = useState(false);
-  const { color, size, img, alt, showConfirmDialog } = props;
+  const [showQuickView, setShowQuickView] = useState(false)
+  const { color, size, img, alt, showConfirmDialog } = props
   return (
     <div className={styles.root}>
       <div>
@@ -36,7 +36,7 @@ const FavoriteCard = (props) => {
         />
       </Drawer>
     </div>
-  );
-};
+  )
+}
 
-export default FavoriteCard;
+export default FavoriteCard

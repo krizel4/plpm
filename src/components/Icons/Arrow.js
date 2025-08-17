@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const Arrow = () => (
   <svg
@@ -10,6 +10,6 @@ const Arrow = () => (
   >
     <path d="m13.5 7.5-4-4m4 4-4 4m4-4H1" stroke="currentColor" />
   </svg>
-);
+)
 
-export default Arrow;
+export default Arrow

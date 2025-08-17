@@ -1,15 +1,15 @@
-import React from 'react';
+import React from 'react'
 
-import { navigate } from 'gatsby';
-import AdjustItem from '../AdjustItem';
-import CurrencyFormatter from '../CurrencyFormatter';
-import RemoveItem from '../RemoveItem';
+import { navigate } from 'gatsby'
+import AdjustItem from '../AdjustItem'
+import CurrencyFormatter from '../CurrencyFormatter'
+import RemoveItem from '../RemoveItem'
 
-import * as styles from './MiniCartItem.module.css';
-import { toOptimizedImage } from '../../helpers/general';
+import * as styles from './MiniCartItem.module.css'
+import { toOptimizedImage } from '../../helpers/general'
 
 const MiniCartItem = (props) => {
-  const { image, alt, name, price, color, size } = props;
+  const { image, alt, name, price, color, size } = props
 
   return (
     <div className={styles.root}>
@@ -40,7 +40,7 @@ const MiniCartItem = (props) => {
         <RemoveItem />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default MiniCartItem;
+export default MiniCartItem

@@ -1,1 +1,1 @@
-export { default } from './RemoveItem';
+export { default } from './RemoveItem'

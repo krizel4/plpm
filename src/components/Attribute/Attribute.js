@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react'
 
-import Icon from '../Icons/Icon';
-import * as styles from './Attribute.module.css';
+import Icon from '../Icons/Icon'
+import * as styles from './Attribute.module.css'
 
 const Attribute = (props) => {
-  const { icon, title, subtitle } = props;
+  const { icon, title, subtitle } = props
 
   return (
     <div className={styles.root}>
@@ -14,7 +14,7 @@ const Attribute = (props) => {
       <span className={styles.title}>{title}</span>
       <span className={styles.subtitle}>{subtitle}</span>
     </div>
-  );
-};
+  )
+}
 
-export default Attribute;
+export default Attribute

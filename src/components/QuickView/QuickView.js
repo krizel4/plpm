@@ -1,31 +1,31 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext } from 'react'
 
-import Button from '../Button';
-import CurrencyFormatter from '../CurrencyFormatter';
-import SizeList from '../SizeList';
-import SwatchList from '../SwatchList';
+import Button from '../Button'
+import CurrencyFormatter from '../CurrencyFormatter'
+import SizeList from '../SizeList'
+import SwatchList from '../SwatchList'
 
-import { generateMockProductData } from '../../helpers/mock';
-import AddItemNotificationContext from '../../context/AddItemNotificationProvider';
+import { generateMockProductData } from '../../helpers/mock'
+import AddItemNotificationContext from '../../context/AddItemNotificationProvider'
 
-import * as styles from './QuickView.module.css';
-import { toOptimizedImage } from '../../helpers/general';
+import * as styles from './QuickView.module.css'
+import { toOptimizedImage } from '../../helpers/general'
 
 const QuickView = (props) => {
-  const { close, buttonTitle = 'Add to Bag' } = props;
-  const sampleProduct = generateMockProductData(1, 'sample')[0];
+  const { close, buttonTitle = 'Add to Bag' } = props
+  const sampleProduct = generateMockProductData(1, 'sample')[0]
 
-  const ctxAddItemNotification = useContext(AddItemNotificationContext);
-  const showNotification = ctxAddItemNotification.showNotification;
+  const ctxAddItemNotification = useContext(AddItemNotificationContext)
+  const showNotification = ctxAddItemNotification.showNotification
   const [activeSwatch, setActiveSwatch] = useState(
     sampleProduct.colorOptions[0]
-  );
-  const [activeSize, setActiveSize] = useState(sampleProduct.sizeOptions[0]);
+  )
+  const [activeSize, setActiveSize] = useState(sampleProduct.sizeOptions[0])
 
   const handleAddToBag = () => {
-    close();
-    showNotification();
-  };
+    close()
+    showNotification()
+  }
 
   return (
     <div className={styles.root}>
@@ -64,7 +64,7 @@ const QuickView = (props) => {
         </Button>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default QuickView;
+export default QuickView

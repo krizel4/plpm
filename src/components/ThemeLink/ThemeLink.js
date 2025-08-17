@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'gatsby';
+import React from 'react'
+import { Link } from 'gatsby'
 
-import * as styles from './ThemeLink.module.css';
+import * as styles from './ThemeLink.module.css'
 
 const ThemeLink = ({ children, to, onClick, isActive, themeRef }) => {
   return (
@@ -15,7 +15,7 @@ const ThemeLink = ({ children, to, onClick, isActive, themeRef }) => {
         {children}
       </Link>
     </div>
-  );
-};
+  )
+}
 
-export default ThemeLink;
+export default ThemeLink

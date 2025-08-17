@@ -1,1 +1,1 @@
-export { default } from './CardController';
+export { default } from './CardController'

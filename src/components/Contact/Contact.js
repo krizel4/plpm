@@ -1,33 +1,33 @@
-import React, { useState } from 'react';
-import Button from '../Button';
+import React, { useState } from 'react'
+import Button from '../Button'
 
-import FormInputField from '../FormInputField/FormInputField';
+import FormInputField from '../FormInputField/FormInputField'
 
-import * as styles from './Contact.module.css';
+import * as styles from './Contact.module.css'
 
 const Contact = (props) => {
-  const [interests, setInterests] = useState([]);
-  
+  const [interests, setInterests] = useState([])
+
   const initialState = {
     firstName: '',
     lastName: '',
     phone: '',
     email: '',
     reason: '',
-    comment: '',
-  };
+    comment: ''
+  }
 
-  const [contactForm, setContactForm] = useState(initialState);
+  const [contactForm, setContactForm] = useState(initialState)
 
   const handleChange = (id, e) => {
-    const tempForm = { ...contactForm, [id]: e };
-    setContactForm(tempForm);
-  };
+    const tempForm = { ...contactForm, [id]: e }
+    setContactForm(tempForm)
+  }
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    setContactForm(initialState);
-  };
+    e.preventDefault()
+    setContactForm(initialState)
+  }
 
   return (
     <div className={styles.root}>
@@ -44,35 +44,35 @@ const Contact = (props) => {
         <form onSubmit={(e) => handleSubmit(e)}>
           <div className={styles.contactForm}>
             <FormInputField
-              id={"firstName"}
+              id={'firstName'}
               value={contactForm.firstName}
               handleChange={(id, e) => handleChange(id, e)}
-              type={"text"}
-              labelName={"First Name"}
+              type={'text'}
+              labelName={'First Name'}
               required
             />
             <FormInputField
-              id={"lastName"}
+              id={'lastName'}
               value={contactForm.lastName}
               handleChange={(id, e) => handleChange(id, e)}
-              type={"text"}
-              labelName={"Last Name"}
+              type={'text'}
+              labelName={'Last Name'}
               required
             />
             <FormInputField
-              id={"phone"}
+              id={'phone'}
               value={contactForm.phone}
               handleChange={(id, e) => handleChange(id, e)}
-              type={"number"}
-              labelName={"Phone Number"}
+              type={'number'}
+              labelName={'Phone Number'}
               required
             />
             <FormInputField
-              id={"email"}
+              id={'email'}
               value={contactForm.email}
               handleChange={(id, e) => handleChange(id, e)}
-              type={"email"}
-              labelName={"Email"}
+              type={'email'}
+              labelName={'Email'}
               required
             />
             {/* <FormInputField
@@ -90,19 +90,19 @@ const Contact = (props) => {
             /> */}
             <div className={styles.commentInput}>
               <FormInputField
-                id={"comment"}
+                id={'comment'}
                 value={contactForm.comment}
                 handleChange={(id, e) => handleChange(id, e)}
-                type={"textarea"}
-                labelName={"Comments / Questions"}
+                type={'textarea'}
+                labelName={'Comments / Questions'}
                 required
               />
             </div>
           </div>
           <Button
             className={styles.customButton}
-            level={"primary"}
-            type={"buttonSubmit"}
+            level={'primary'}
+            type={'buttonSubmit'}
           >
             submit
           </Button>
@@ -120,17 +120,17 @@ const Contact = (props) => {
         </div>
         <div>
           <p className={styles.centerText}>
-            730 W Lancaster Blvd Suite 105 |{" "}
+            730 W Lancaster Blvd Suite 105 |{' '}
             <a href="mailto: hello@prettylittlepoppymarketplace.com">
               hello@prettylittlepoppymarketplace.com
-            </a>{" "}
+            </a>{' '}
             | (661) 206-7960
           </p>
           <br />
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact

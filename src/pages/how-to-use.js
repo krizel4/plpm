@@ -1,24 +1,24 @@
-import React, { useRef } from 'react';
-import * as styles from './about.module.css';
+import React, { useRef } from 'react'
+import * as styles from './about.module.css'
 
-import Layout from '../components/Layout/Layout';
-import ThemeLink from '../components/ThemeLink';
-import Container from '../components/Container';
-import Button from '../components/Button';
-import { toOptimizedImage } from '../helpers/general';
+import Layout from '../components/Layout/Layout'
+import ThemeLink from '../components/ThemeLink'
+import Container from '../components/Container'
+import Button from '../components/Button'
+import { toOptimizedImage } from '../helpers/general'
 
 const HowToUsePage = (props) => {
-  let builtRef = useRef();
-  let toolsRef = useRef();
+  const builtRef = useRef()
+  const toolsRef = useRef()
 
   const handleScroll = (elementReference) => {
     if (elementReference) {
       window.scrollTo({
         behavior: 'smooth',
-        top: elementReference.current.offsetTop - 280,
-      });
+        top: elementReference.current.offsetTop - 280
+      })
     }
-  };
+  }
 
   return (
     <Layout>
@@ -169,7 +169,7 @@ const HowToUsePage = (props) => {
         </div>
       </div>
     </Layout>
-  );
-};
+  )
+}
 
-export default HowToUsePage;
+export default HowToUsePage

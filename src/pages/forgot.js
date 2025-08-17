@@ -1,25 +1,25 @@
-import React, { useState } from 'react';
-import { validateEmail } from '../helpers/general';
-import * as styles from './forgot.module.css';
+import React, { useState } from 'react'
+import { validateEmail } from '../helpers/general'
+import * as styles from './forgot.module.css'
 
-import Layout from '../components/Layout/Layout';
-import FormInputField from '../components/FormInputField/FormInputField';
-import Button from '../components/Button';
-import AttributeGrid from '../components/AttributeGrid';
+import Layout from '../components/Layout/Layout'
+import FormInputField from '../components/FormInputField/FormInputField'
+import Button from '../components/Button'
+import AttributeGrid from '../components/AttributeGrid'
 
 const ForgotPage = (props) => {
-  const [email, setEmail] = useState('');
-  const [error, setError] = useState('');
+  const [email, setEmail] = useState('')
+  const [error, setError] = useState('')
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault()
     if (validateEmail(email) !== true) {
-      setError('Not a valid email address');
-      return;
+      setError('Not a valid email address')
+      return
     }
-    setEmail('');
-    setError('');
-  };
+    setEmail('')
+    setError('')
+  }
 
   return (
     <Layout disablePaddingBottom>
@@ -54,7 +54,7 @@ const ForgotPage = (props) => {
         <AttributeGrid />
       </div>
     </Layout>
-  );
-};
+  )
+}
 
-export default ForgotPage;
+export default ForgotPage

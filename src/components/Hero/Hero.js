@@ -1,8 +1,8 @@
-import React from "react";
-import * as styles from "./Hero.module.css";
-import Button from "../Button";
-import { Link } from "gatsby";
-import { toOptimizedImage } from "../../helpers/general";
+import React from 'react'
+import * as styles from './Hero.module.css'
+import Button from '../Button'
+import { Link } from 'gatsby'
+import { toOptimizedImage } from '../../helpers/general'
 
 const Hero = (props) => {
   const {
@@ -15,10 +15,10 @@ const Hero = (props) => {
     ctaStyle,
     ctaLink,
     ctaTo,
-    header,
-  } = props;
+    header
+  } = props
 
-  const videoURL = props.video || props.videoURL;
+  const videoURL = props.video || props.videoURL
 
   return (
     <div className={styles.root}>
@@ -68,7 +68,7 @@ const Hero = (props) => {
         )}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero

@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import { navigate } from 'gatsby';
-import * as styles from './ProductCard.module.css';
+import React, { useState } from 'react'
+import { navigate } from 'gatsby'
+import * as styles from './ProductCard.module.css'
 
-import Icon from '../Icons/Icon';
-import CurrencyFormatter from '../CurrencyFormatter';
-import { toOptimizedImage } from '../../helpers/general';
+import Icon from '../Icons/Icon'
+import CurrencyFormatter from '../CurrencyFormatter'
+import { toOptimizedImage } from '../../helpers/general'
 
 const ProductCard = (props) => {
-  const [isWishlist, setIsWishlist] = useState(false);
+  const [isWishlist, setIsWishlist] = useState(false)
   const {
     image,
     imageAlt,
@@ -16,22 +16,22 @@ const ProductCard = (props) => {
     originalPrice,
     meta,
     showQuickView,
-    height = 580,
-  } = props;
+    height = 580
+  } = props
 
   const handleRouteToProduct = () => {
-    navigate('/product/sample');
-  };
+    navigate('/product/sample')
+  }
 
   const handleQuickView = (e) => {
-    e.stopPropagation();
-    showQuickView();
-  };
+    e.stopPropagation()
+    showQuickView()
+  }
 
   const handleFavorite = (e) => {
-    e.stopPropagation();
-    setIsWishlist(!isWishlist);
-  };
+    e.stopPropagation()
+    setIsWishlist(!isWishlist)
+  }
 
   return (
     <div className={styles.root}>
@@ -80,7 +80,7 @@ const ProductCard = (props) => {
         <span className={styles.meta}>{meta}</span>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ProductCard;
+export default ProductCard

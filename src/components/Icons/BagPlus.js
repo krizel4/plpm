@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const BagPlus = () => (
   <svg
@@ -13,6 +13,6 @@ const BagPlus = () => (
       stroke="currentColor"
     />
   </svg>
-);
+)
 
-export default BagPlus;
+export default BagPlus

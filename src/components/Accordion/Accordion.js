@@ -1,20 +1,22 @@
-import React, { useState } from 'react';
-import Icon from '../Icons/Icon';
-import * as styles from './Accordion.module.css';
+import React, { useState } from 'react'
+import Icon from '../Icons/Icon'
+import * as styles from './Accordion.module.css'
 
 const Accordion = (props) => {
-  const { title, type = 'caret', customStyle, children } = props;
+  const { title, type = 'caret', customStyle, children } = props
 
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false)
 
-  const combinedStyling = { ...styles, ...customStyle };
+  const combinedStyling = { ...styles, ...customStyle }
 
   const icon =
-    type === 'caret' ? (
+    type === 'caret'
+      ? (
       <Icon symbol={'caret'}></Icon>
-    ) : (
+        )
+      : (
       <Icon symbol={`${open === true ? 'minus' : 'plus'}`}></Icon>
-    );
+        )
 
   return (
     <div className={combinedStyling.accordionRoot}>
@@ -44,7 +46,7 @@ const Accordion = (props) => {
         {children}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Accordion;
+export default Accordion

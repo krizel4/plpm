@@ -1,6 +1,6 @@
-import { Link } from 'gatsby';
-import React from 'react';
-import * as styles from './Title.module.css';
+import { Link } from 'gatsby'
+import React from 'react'
+import * as styles from './Title.module.css'
 
 const Title = (props) => {
   const {
@@ -11,17 +11,17 @@ const Title = (props) => {
     maxWidth,
     color = 'var(--standard-black)',
     hideSubtitleOnMobile = false,
-    marginBottom = '32px',
-  } = props;
+    marginBottom = '32px'
+  } = props
 
   return (
     <div
       className={`${styles.root} ${
         hideSubtitleOnMobile === true ? styles.hideSubtitleOnMobile : ''
       }`}
-      style={{ maxWidth: maxWidth, marginBottom: marginBottom }}
+      style={{ maxWidth, marginBottom }}
     >
-      <h2 className={styles.title} style={{ color: color }}>
+      <h2 className={styles.title} style={{ color }}>
         {name}
       </h2>
       {subtitle && <span className={`${styles.subtitle}`}>{subtitle}</span>}
@@ -31,7 +31,7 @@ const Title = (props) => {
         </Link>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default Title;
+export default Title

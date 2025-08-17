@@ -1,6 +1,6 @@
-import React from 'react';
-import Layout from "../components/Layout/Layout";
-import * as styles from './ccpa.module.css';
+import React from 'react'
+import Layout from '../components/Layout/Layout'
+import * as styles from './ccpa.module.css'
 
 export default function IndexPage () {
   return (
@@ -247,5 +247,5 @@ export default function IndexPage () {
         </footer>
         </div>
     </Layout>
-  );
+  )
 }

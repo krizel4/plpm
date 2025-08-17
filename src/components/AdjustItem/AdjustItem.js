@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
-import Icon from '../Icons/Icon';
-import * as styles from './AdjustItem.module.css';
+import Icon from '../Icons/Icon'
+import * as styles from './AdjustItem.module.css'
 
 const AdjustItem = (props) => {
-  const { isTransparent } = props;
-  const [qty, setQty] = useState(1);
+  const { isTransparent } = props
+  const [qty, setQty] = useState(1)
 
   const handleOnChange = (e) => {
-    const num = parseInt(e.target.value);
-    setQty(num);
-  };
+    const num = parseInt(e.target.value)
+    setQty(num)
+  }
 
   return (
     <div
@@ -22,8 +22,8 @@ const AdjustItem = (props) => {
         className={styles.iconContainer}
         role={'presentation'}
         onClick={() => {
-          if (qty <= 1) return;
-          setQty(qty - 1);
+          if (qty <= 1) return
+          setQty(qty - 1)
         }}
       >
         <Icon symbol={'minus'}></Icon>
@@ -44,7 +44,7 @@ const AdjustItem = (props) => {
         <Icon symbol={'plus'}></Icon>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default AdjustItem;
+export default AdjustItem

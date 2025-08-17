@@ -1,1 +1,1 @@
-export { default } from './BlogPreviewGrid';
+export { default } from './BlogPreviewGrid'

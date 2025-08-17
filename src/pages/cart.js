@@ -1,14 +1,14 @@
-import { Link } from 'gatsby';
-import React from 'react';
+import { Link } from 'gatsby'
+import React from 'react'
 
-import Brand from '../components/Brand';
-import CartItem from '../components/CartItem';
-import Container from '../components/Container';
-import Footer from '../components/Footer';
-import Icon from '../components/Icons/Icon';
-import OrderSummary from '../components/OrderSummary';
+import Brand from '../components/Brand'
+import CartItem from '../components/CartItem'
+import Container from '../components/Container'
+import Footer from '../components/Footer'
+import Icon from '../components/Icons/Icon'
+import OrderSummary from '../components/OrderSummary'
 
-import * as styles from './cart.module.css';
+import * as styles from './cart.module.css'
 
 const CartPage = (props) => {
   const sampleCartItem = {
@@ -17,8 +17,8 @@ const CartPage = (props) => {
     name: 'Lambswool Crew Neck Jumper',
     price: 220,
     color: 'Anthracite Melange',
-    size: 'XS',
-  };
+    size: 'XS'
+  }
 
   return (
     <div>
@@ -52,7 +52,7 @@ const CartPage = (props) => {
       </div>
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default CartPage;
+export default CartPage

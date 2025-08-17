@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'gatsby';
+import React from 'react'
+import { Link } from 'gatsby'
 
-import * as styles from './Button.module.css';
+import * as styles from './Button.module.css'
 
 const Button = ({
   children,
@@ -16,37 +16,37 @@ const Button = ({
   flat,
   link,
   fullWidth,
-  theme,
+  theme
 }) => {
-  const classes = level ? [styles.button] : [styles.link];
+  const classes = level ? [styles.button] : [styles.link]
 
   if (level in styles) {
-    classes.push(styles[level]);
+    classes.push(styles[level])
   }
   if (size in styles) {
-    classes.push(styles[size]);
+    classes.push(styles[size])
   }
   if (theme in styles) {
-    classes.push(styles[theme]);
+    classes.push(styles[theme])
   }
 
   if (disabled) {
-    classes.push(styles.disabled);
+    classes.push(styles.disabled)
   }
   if (flat) {
-    classes.push(styles.flat);
+    classes.push(styles.flat)
   }
   if (link) {
-    classes.push(styles.link);
+    classes.push(styles.link)
   }
   if (fullWidth) {
-    classes.push(styles.fullWidth);
+    classes.push(styles.fullWidth)
   }
   if (className) {
-    classes.push(className);
+    classes.push(className)
   }
 
-  const classOutput = classes.join(' ');
+  const classOutput = classes.join(' ')
   return (
     <>
       {href && target && (
@@ -76,7 +76,7 @@ const Button = ({
         </button>
       )}
     </>
-  );
-};
+  )
+}
 
-export default Button;
+export default Button

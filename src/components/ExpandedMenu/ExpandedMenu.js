@@ -1,13 +1,13 @@
-import { Link } from 'gatsby';
-import React from 'react';
+import { Link } from 'gatsby'
+import React from 'react'
 
-import * as styles from './ExpandedMenu.module.css';
-import { toOptimizedImage } from '../../helpers/general';
+import * as styles from './ExpandedMenu.module.css'
+import { toOptimizedImage } from '../../helpers/general'
 
 const ExpandedMenu = (props) => {
-  const { menu } = props;
+  const { menu } = props
 
-  if (menu === null || menu === undefined) return <React.Fragment />;
+  if (menu === null || menu === undefined) return <React.Fragment />
   return (
     <div className={styles.root}>
       <div className={styles.linkContainers}>
@@ -23,11 +23,11 @@ const ExpandedMenu = (props) => {
                         {link.menuLabel}
                       </Link>
                     </li>
-                  );
+                  )
                 })}
               </ul>
             </div>
-          );
+          )
         })}
       </div>
       <div className={styles.imageContainer}>
@@ -35,7 +35,7 @@ const ExpandedMenu = (props) => {
         <img src={toOptimizedImage('/headerPic2.png')} alt={'header 2'}></img>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ExpandedMenu;
+export default ExpandedMenu

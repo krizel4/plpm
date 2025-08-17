@@ -1,9 +1,9 @@
-import React from 'react';
-import * as styles from './accountSuccess.module.css';
+import React from 'react'
+import * as styles from './accountSuccess.module.css'
 
-import ActionCard from '../components/ActionCard';
-import Container from '../components/Container';
-import Layout from '../components/Layout/Layout';
+import ActionCard from '../components/ActionCard'
+import Container from '../components/Container'
+import Layout from '../components/Layout/Layout'
 
 const AccountSuccessPage = (props) => {
   return (
@@ -33,7 +33,7 @@ const AccountSuccessPage = (props) => {
         </div>
       </Container>
     </Layout>
-  );
-};
+  )
+}
 
-export default AccountSuccessPage;
+export default AccountSuccessPage

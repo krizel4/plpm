@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const Plus = () => (
   <svg
@@ -10,6 +10,6 @@ const Plus = () => (
   >
     <path d="M7.5 1v13M1 7.5h13" stroke="currentColor" />
   </svg>
-);
+)
 
-export default Plus;
+export default Plus

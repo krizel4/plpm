@@ -1,36 +1,36 @@
-import React, { useState, useContext } from 'react';
-import * as styles from './sample.module.css';
+import React, { useState, useContext } from 'react'
+import * as styles from './sample.module.css'
 
-import Accordion from '../../components/Accordion';
-import AdjustItem from '../../components/AdjustItem';
-import Button from '../../components/Button';
-import Breadcrumbs from '../../components/Breadcrumbs';
-import Container from '../../components/Container';
-import CurrencyFormatter from '../../components/CurrencyFormatter';
-import Gallery from '../../components/Gallery';
-import SizeList from '../../components/SizeList';
-import Split from '../../components/Split';
-import SwatchList from '../../components/SwatchList';
-import Layout from '../../components/Layout/Layout';
+import Accordion from '../../components/Accordion'
+import AdjustItem from '../../components/AdjustItem'
+import Button from '../../components/Button'
+import Breadcrumbs from '../../components/Breadcrumbs'
+import Container from '../../components/Container'
+import CurrencyFormatter from '../../components/CurrencyFormatter'
+import Gallery from '../../components/Gallery'
+import SizeList from '../../components/SizeList'
+import Split from '../../components/Split'
+import SwatchList from '../../components/SwatchList'
+import Layout from '../../components/Layout/Layout'
 
-import { generateMockProductData } from '../../helpers/mock';
-import Icon from '../../components/Icons/Icon';
-import ProductCardGrid from '../../components/ProductCardGrid';
-import { navigate } from 'gatsby';
+import { generateMockProductData } from '../../helpers/mock'
+import Icon from '../../components/Icons/Icon'
+import ProductCardGrid from '../../components/ProductCardGrid'
+import { navigate } from 'gatsby'
 
-import AddItemNotificationContext from '../../context/AddItemNotificationProvider';
+import AddItemNotificationContext from '../../context/AddItemNotificationProvider'
 
 const ProductPage = (props) => {
-  const ctxAddItemNotification = useContext(AddItemNotificationContext);
-  const showNotification = ctxAddItemNotification.showNotification;
-  const sampleProduct = generateMockProductData(1, 'sample')[0];
-  const [qty, setQty] = useState(0);
-  const [isWishlist, setIsWishlist] = useState(false);
+  const ctxAddItemNotification = useContext(AddItemNotificationContext)
+  const showNotification = ctxAddItemNotification.showNotification
+  const sampleProduct = generateMockProductData(1, 'sample')[0]
+  const [qty, setQty] = useState(0)
+  const [isWishlist, setIsWishlist] = useState(false)
   const [activeSwatch, setActiveSwatch] = useState(
     sampleProduct.colorOptions[0]
-  );
-  const [activeSize, setActiveSize] = useState(sampleProduct.sizeOptions[0]);
-  const suggestions = generateMockProductData(4, 'woman');
+  )
+  const [activeSize, setActiveSize] = useState(sampleProduct.sizeOptions[0])
+  const suggestions = generateMockProductData(4, 'woman')
 
   return (
     <Layout>
@@ -41,7 +41,7 @@ const ProductPage = (props) => {
               { link: '/', label: 'Home' },
               { label: 'Men', link: '/shop' },
               { label: 'Sweater', link: '/shop' },
-              { label: `${sampleProduct.name}` },
+              { label: `${sampleProduct.name}` }
             ]}
           />
           <div className={styles.content}>
@@ -162,7 +162,7 @@ const ProductPage = (props) => {
         </div>
       </div>
     </Layout>
-  );
-};
+  )
+}
 
-export default ProductPage;
+export default ProductPage

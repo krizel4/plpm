@@ -1,8 +1,8 @@
-import React from 'react';
-import * as styles from './Checkbox.module.css';
+import React from 'react'
+import * as styles from './Checkbox.module.css'
 
 const Checkbox = (props) => {
-  const { value, label, id, name, action, isChecked, size = 'md' } = props;
+  const { value, label, id, name, action, isChecked, size = 'md' } = props
   return (
     <div className={styles.checkboxWrapper}>
       <div className={styles.inputWrapper}>
@@ -28,7 +28,7 @@ const Checkbox = (props) => {
         {label}
       </label>
     </div>
-  );
-};
+  )
+}
 
-export default Checkbox;
+export default Checkbox

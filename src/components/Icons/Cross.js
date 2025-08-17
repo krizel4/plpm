@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const Cross = () => (
   <svg
@@ -10,6 +10,6 @@ const Cross = () => (
   >
     <path d="m1.2 1.2 9.6 9.6m-9.6 0 9.6-9.6" stroke="currentColor" />
   </svg>
-);
+)
 
-export default Cross;
+export default Cross

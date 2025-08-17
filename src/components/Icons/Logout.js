@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const Logout = () => (
   <svg
@@ -13,6 +13,6 @@ const Logout = () => (
       stroke="currentColor"
     />
   </svg>
-);
+)
 
-export default Logout;
+export default Logout

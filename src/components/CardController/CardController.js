@@ -1,32 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
-import Container from '../Container';
-import Checkbox from '../Checkbox';
-import * as styles from './CardController.module.css';
-import Button from '../Button';
-import Drawer from '../Drawer';
-import Icon from '../Icons/Icon';
+import Container from '../Container'
+import Checkbox from '../Checkbox'
+import * as styles from './CardController.module.css'
+import Button from '../Button'
+import Drawer from '../Drawer'
+import Icon from '../Icons/Icon'
 
 const CardController = (props) => {
-  const { filters, visible, closeFilter } = props;
-  const [category, setCategory] = useState();
-  const [filterState, setFilterState] = useState(filters);
+  const { filters, visible, closeFilter } = props
+  const [category, setCategory] = useState()
+  const [filterState, setFilterState] = useState(filters)
 
   const filterTick = (e, categoryIndex, labelIndex) => {
-    const filterStateCopy = [...filterState];
-    filterStateCopy[categoryIndex].items[labelIndex].value = e.target.checked;
-    setFilterState(filterStateCopy);
-  };
+    const filterStateCopy = [...filterState]
+    filterStateCopy[categoryIndex].items[labelIndex].value = e.target.checked
+    setFilterState(filterStateCopy)
+  }
 
   const resetFilter = () => {
-    const filterStateCopy = [...filterState];
+    const filterStateCopy = [...filterState]
     for (let x = 0; x < filterStateCopy.length; x++) {
       for (let y = 0; y < filterStateCopy[x].items.length; y++) {
-        filterStateCopy[x].items[y].value = false;
+        filterStateCopy[x].items[y].value = false
       }
     }
-    setFilterState(filterStateCopy);
-  };
+    setFilterState(filterStateCopy)
+  }
 
   return (
     <div>
@@ -40,7 +40,7 @@ const CardController = (props) => {
             {filterState &&
               filterState.map((filter, categoryIndex) => {
                 // if number of filter per category is less than 4 maintain single layout
-                const colNum = filter.items.length >= 4 ? 2 : 1;
+                const colNum = filter.items.length >= 4 ? 2 : 1
                 return (
                   <div key={`category-${categoryIndex}`}>
                     <span className={styles.category}>{filter.category}</span>
@@ -64,7 +64,7 @@ const CardController = (props) => {
                         ))}
                     </div>
                   </div>
-                );
+                )
               })}
           </div>
         </Container>
@@ -101,7 +101,7 @@ const CardController = (props) => {
                       onClick={() =>
                         setCategory({
                           ...filterItem,
-                          categoryIndex: categoryIndex,
+                          categoryIndex
                         })
                       }
                     >
@@ -110,7 +110,7 @@ const CardController = (props) => {
                       </span>
                       <Icon symbol={'arrow'}></Icon>
                     </div>
-                  );
+                  )
                 })}
               </div>
             )}
@@ -140,7 +140,7 @@ const CardController = (props) => {
                       name={item.name}
                       isChecked={item.value}
                     />
-                  );
+                  )
                 })}
               </div>
             )}
@@ -170,7 +170,7 @@ const CardController = (props) => {
         </Drawer>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default CardController;
+export default CardController

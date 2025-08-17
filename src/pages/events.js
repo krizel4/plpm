@@ -1,10 +1,10 @@
-import * as React from "react";
-import { Link } from "react";
-import Hero from "../components/Hero";
-import Layout from "../components/Layout/Layout";
-import { CalendarApp } from "../components/Calendar/Calendar";
+import * as React from 'react'
+import { Link } from 'react'
+import Hero from '../components/Hero'
+import Layout from '../components/Layout/Layout'
+import { CalendarApp } from '../components/Calendar/Calendar'
 
-import * as styles from "./index.module.css";
+import * as styles from './index.module.css'
 
 const IndexPage = () => {
   return (
@@ -13,7 +13,7 @@ const IndexPage = () => {
         <CalendarApp />
       </div>
     </Layout>
-  );
-};
+  )
+}
 
-export default IndexPage;
+export default IndexPage

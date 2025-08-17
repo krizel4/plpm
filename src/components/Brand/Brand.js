@@ -1,7 +1,7 @@
-import React from 'react';
-import { navigate } from 'gatsby';
+import React from 'react'
+import { navigate } from 'gatsby'
 
-import * as styles from './Brand.module.css';
+import * as styles from './Brand.module.css'
 
 const Brand = (props) => {
   return (
@@ -10,9 +10,9 @@ const Brand = (props) => {
       role={'presentation'}
       onClick={() => navigate('/')}
     >
-       <h4 className={styles.logo}>PRETTY LITTLE POPPY MARKETPLACE</h4> 
+       <h4 className={styles.logo}>PRETTY LITTLE POPPY MARKETPLACE</h4>
     </div>
-  );
-};
+  )
+}
 
-export default Brand;
+export default Brand

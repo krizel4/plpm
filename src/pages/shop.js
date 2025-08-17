@@ -1,32 +1,32 @@
-import React, { useState, useEffect } from 'react';
-import * as styles from './shop.module.css';
+import React, { useState, useEffect } from 'react'
+import * as styles from './shop.module.css'
 
-import Banner from '../components/Banner';
-import Breadcrumbs from '../components/Breadcrumbs';
-import CardController from '../components/CardController';
-import Container from '../components/Container';
-import Chip from '../components/Chip';
-import Icon from '../components/Icons/Icon';
-import Layout from '../components/Layout';
-import LayoutOption from '../components/LayoutOption';
-import ProductCardGrid from '../components/ProductCardGrid';
-import { generateMockProductData } from '../helpers/mock';
-import Button from '../components/Button';
-import Config from '../config.json';
+import Banner from '../components/Banner'
+import Breadcrumbs from '../components/Breadcrumbs'
+import CardController from '../components/CardController'
+import Container from '../components/Container'
+import Chip from '../components/Chip'
+import Icon from '../components/Icons/Icon'
+import Layout from '../components/Layout'
+import LayoutOption from '../components/LayoutOption'
+import ProductCardGrid from '../components/ProductCardGrid'
+import { generateMockProductData } from '../helpers/mock'
+import Button from '../components/Button'
+import Config from '../config.json'
 
 const ShopPage = (props) => {
-  const [showFilter, setShowFilter] = useState(false);
-  const data = generateMockProductData(6, 'woman');
+  const [showFilter, setShowFilter] = useState(false)
+  const data = generateMockProductData(6, 'woman')
 
   useEffect(() => {
-    window.addEventListener('keydown', escapeHandler);
-    return () => window.removeEventListener('keydown', escapeHandler);
-  }, []);
+    window.addEventListener('keydown', escapeHandler)
+    return () => window.removeEventListener('keydown', escapeHandler)
+  }, [])
 
   const escapeHandler = (e) => {
-    if (e?.keyCode === undefined) return;
-    if (e.keyCode === 27) setShowFilter(false);
-  };
+    if (e?.keyCode === undefined) return
+    if (e.keyCode === 27) setShowFilter(false)
+  }
 
   return (
     <Layout>
@@ -37,14 +37,14 @@ const ShopPage = (props) => {
               crumbs={[
                 { link: '/', label: 'Home' },
                 { link: '/', label: 'Woman' },
-                { label: 'Sweaters' },
+                { label: 'Sweaters' }
               ]}
             />
           </div>
         </Container>
         <Banner
           maxWidth={'650px'}
-          name={`Woman's Sweaters`}
+          name={'Woman\'s Sweaters'}
           subtitle={
             'Look to our women’s sweaters for modern takes on one-and-done dressing. From midis in bold prints to dramatic floor-sweeping styles and easy all-in-ones, our edit covers every mood.'
           }
@@ -93,7 +93,7 @@ const ShopPage = (props) => {
 
       <LayoutOption />
     </Layout>
-  );
-};
+  )
+}
 
-export default ShopPage;
+export default ShopPage

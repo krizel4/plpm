@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
-import * as styles from './Modal.module.css';
+import React, { useEffect } from 'react'
+import * as styles from './Modal.module.css'
 
 const Modal = ({ children, visible, close }) => {
   useEffect(() => {
-    window.addEventListener('keydown', close);
-    return () => window.removeEventListener('keydown', close);
-  }, [close]);
+    window.addEventListener('keydown', close)
+    return () => window.removeEventListener('keydown', close)
+  }, [close])
 
   return (
     <div
@@ -20,7 +20,7 @@ const Modal = ({ children, visible, close }) => {
         className={styles.backdrop}
       ></div>
     </div>
-  );
-};
+  )
+}
 
-export default Modal;
+export default Modal

@@ -1,43 +1,43 @@
-import React, { useState } from 'react';
-import { navigate } from 'gatsby';
-import * as styles from './favorites.module.css';
+import React, { useState } from 'react'
+import { navigate } from 'gatsby'
+import * as styles from './favorites.module.css'
 
-import Button from '../../components/Button';
-import Breadcrumbs from '../../components/Breadcrumbs';
-import Container from '../../components/Container';
-import FavoriteCard from '../../components/FavoriteCard/FavoriteCard';
-import Layout from '../../components/Layout/Layout';
-import Modal from '../../components/Modal';
+import Button from '../../components/Button'
+import Breadcrumbs from '../../components/Breadcrumbs'
+import Container from '../../components/Container'
+import FavoriteCard from '../../components/FavoriteCard/FavoriteCard'
+import Layout from '../../components/Layout/Layout'
+import Modal from '../../components/Modal'
 
-import { isAuth } from '../../helpers/general';
+import { isAuth } from '../../helpers/general'
 
 const FavoritesPage = (props) => {
   const sampleFavorite1 = {
     color: 'Anthracite Melange',
     size: 'XS',
     img: '/products/shirt1.jpg',
-    alt: 'favorite 1',
-  };
+    alt: 'favorite 1'
+  }
 
   const sampleFavorite2 = {
     color: 'Purple Pale',
     size: 'XS',
     img: '/products/shirt2.jpg',
-    alt: 'favorite 2',
-  };
+    alt: 'favorite 2'
+  }
 
   const sampleFavorite3 = {
     color: 'Moss Green',
     size: 'S',
     img: '/products/shirt3.jpg',
-    alt: 'favorite 3',
-  };
-
-  if (isAuth() === false) {
-    navigate('/login');
+    alt: 'favorite 3'
   }
 
-  const [showDelete, setShowDelete] = useState(false);
+  if (isAuth() === false) {
+    navigate('/login')
+  }
+
+  const [showDelete, setShowDelete] = useState(false)
 
   return (
     <Layout>
@@ -46,7 +46,7 @@ const FavoritesPage = (props) => {
           <Breadcrumbs
             crumbs={[
               { link: '/', label: 'Home' },
-              { link: '/account/favorites', label: 'Favorites' },
+              { link: '/account/favorites', label: 'Favorites' }
             ]}
           />
           <h1>Favorites</h1>
@@ -88,7 +88,7 @@ const FavoritesPage = (props) => {
         </div>
       </Modal>
     </Layout>
-  );
-};
+  )
+}
 
-export default FavoritesPage;
+export default FavoritesPage

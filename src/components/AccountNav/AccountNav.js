@@ -1,12 +1,12 @@
-import { Link, navigate } from 'gatsby';
-import React from 'react';
-import * as styles from './AccountNav.module.css';
+import { Link, navigate } from 'gatsby'
+import React from 'react'
+import * as styles from './AccountNav.module.css'
 
 const AccountNav = (props) => {
   const handleLogout = () => {
-    window.localStorage.removeItem('key');
-    navigate('/');
-  };
+    window.localStorage.removeItem('key')
+    navigate('/')
+  }
 
   return (
     <div className={styles.root}>
@@ -48,7 +48,7 @@ const AccountNav = (props) => {
         </span>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default AccountNav;
+export default AccountNav

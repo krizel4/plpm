@@ -1,13 +1,13 @@
-import { Link } from 'gatsby';
-import React, { useContext } from 'react';
+import { Link } from 'gatsby'
+import React, { useContext } from 'react'
 
-import AddItemNotificationContext from '../../context/AddItemNotificationProvider';
+import AddItemNotificationContext from '../../context/AddItemNotificationProvider'
 
-import Button from '../Button';
-import Icon from '../Icons/Icon';
+import Button from '../Button'
+import Icon from '../Icons/Icon'
 
-import * as styles from './AddNotification.module.css';
-import { toOptimizedImage } from '../../helpers/general';
+import * as styles from './AddNotification.module.css'
+import { toOptimizedImage } from '../../helpers/general'
 
 const AddNotification = (props) => {
   const sampleCartItem = {
@@ -16,11 +16,11 @@ const AddNotification = (props) => {
     name: 'Lambswool Crew Neck Jumper',
     price: 220,
     color: 'Anthracite Melange',
-    size: 'XS',
-  };
+    size: 'XS'
+  }
 
-  const ctxAddItemNotification = useContext(AddItemNotificationContext);
-  const showNotif = ctxAddItemNotification.state?.open;
+  const ctxAddItemNotification = useContext(AddItemNotificationContext)
+  const showNotif = ctxAddItemNotification.state?.open
 
   return (
     <div
@@ -58,7 +58,7 @@ const AddNotification = (props) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default AddNotification;
+export default AddNotification

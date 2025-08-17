@@ -1,57 +1,57 @@
-import React, { useRef } from 'react';
+import React, { useRef } from 'react'
 
-import Button from '../components/Button';
-import Container from '../components/Container';
-import Hero from '../components/Hero';
-import ThemeLink from '../components/ThemeLink';
-import Layout from '../components/Layout/Layout';
-import InstagramEmbed from "../components/InstagramEmbed";
+import Button from '../components/Button'
+import Container from '../components/Container'
+import Hero from '../components/Hero'
+import ThemeLink from '../components/ThemeLink'
+import Layout from '../components/Layout/Layout'
+import InstagramEmbed from '../components/InstagramEmbed'
 
-import * as styles from './about.module.css';
+import * as styles from './about.module.css'
 
 const AboutPage = (props) => {
-  let visionRef = useRef();
-  let missionRef = useRef();
-  let m2mRef = useRef();
+  const visionRef = useRef()
+  const missionRef = useRef()
+  const m2mRef = useRef()
 
   const handleScroll = (elementReference) => {
     if (elementReference) {
       window.scrollTo({
         behavior: 'smooth',
-        top: elementReference.current.offsetTop - 280,
-      });
+        top: elementReference.current.offsetTop - 280
+      })
     }
-  };
+  }
 
   return (
     <Layout disablePaddingBottom>
       <div className={styles.root}>
         {/* Hero Container */}
         <Hero
-          style={{ filter: "blur(4px)" }}
-          title={`Pretty Little Poppy \n est. 2022`}
-          maxWidth={"1024"}
+          style={{ filter: 'blur(4px)' }}
+          title={'Pretty Little Poppy \n est. 2022'}
+          maxWidth={'1024'}
           image={
-            "https://images.ctfassets.net/xuyebjupxu9b/2VZ1I8yzTtHh12m8p2ZaTE/28790671434e620d75f49920c49d9e0c/Pretty-little-poppy-marketplace-Lancaster-ca-antelope-valley-enhanced.png"
+            'https://images.ctfassets.net/xuyebjupxu9b/2VZ1I8yzTtHh12m8p2ZaTE/28790671434e620d75f49920c49d9e0c/Pretty-little-poppy-marketplace-Lancaster-ca-antelope-valley-enhanced.png'
           }
         />
 
         <div className={styles.navContainer}>
-          <ThemeLink onClick={() => handleScroll(visionRef)} to={"#vision"}>
+          <ThemeLink onClick={() => handleScroll(visionRef)} to={'#vision'}>
             Our Vision
           </ThemeLink>
-          <ThemeLink onClick={() => handleScroll(missionRef)} to={"#mission"}>
+          <ThemeLink onClick={() => handleScroll(missionRef)} to={'#mission'}>
             Our Mission
           </ThemeLink>
           <ThemeLink
             onClick={() => handleScroll(m2mRef)}
-            to={"#majors"}
+            to={'#majors'}
           >
             Our Impact
           </ThemeLink>
         </div>
 
-        <Container size={"large"} spacing={"min"}>
+        <Container size={'large'} spacing={'min'}>
           <div className={styles.detailContainer} ref={visionRef}>
             <h3>Our Vision is...</h3>
             <p>
@@ -66,7 +66,7 @@ const AboutPage = (props) => {
           <Hero video="https://videos.ctfassets.net/xuyebjupxu9b/4QdstqaZNnMw1U9XalDKmE/6f710ae260fbfd0cef225caf33a3f61a/pretty-little-poppy-marketplace-vendors.mp4" />
         </div>
 
-        <Container size={"large"} spacing={"min"}>
+        <Container size={'large'} spacing={'min'}>
           <div className={styles.content}>
             <h3>Our Mission</h3>
             <div ref={missionRef}>
@@ -82,7 +82,7 @@ const AboutPage = (props) => {
                 <li>Difference-Makers</li>
               </ol>
 
-              <Button 
+              <Button
                 level="primary"
                 className={styles.centerButton}
                 href="/contact"
@@ -109,13 +109,13 @@ const AboutPage = (props) => {
             </span>
             <InstagramEmbed
               url="https://www.instagram.com/reel/DCnWYt_ymvW/"
-              style={"display: block; margin: 0 auto"}
+              style={'display: block; margin: 0 auto'}
             />
           </div>
         </Container>
       </div>
     </Layout>
-  );
-};
+  )
+}
 
-export default AboutPage;
+export default AboutPage

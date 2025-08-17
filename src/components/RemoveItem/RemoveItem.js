@@ -1,15 +1,15 @@
-import React from 'react';
+import React from 'react'
 
-import Icon from '../Icons/Icon';
+import Icon from '../Icons/Icon'
 
-import * as styles from './RemoveItem.module.css';
+import * as styles from './RemoveItem.module.css'
 
 const RemoveItem = (props) => {
   return (
     <div className={styles.root}>
       <Icon symbol={'cross'} />
     </div>
-  );
-};
+  )
+}
 
-export default RemoveItem;
+export default RemoveItem

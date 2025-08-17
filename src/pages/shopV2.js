@@ -1,30 +1,30 @@
-import React, { useState } from 'react';
-import * as styles from './shopV2.module.css';
+import React, { useState } from 'react'
+import * as styles from './shopV2.module.css'
 
-import Accordion from '../components/Accordion';
-import Banner from '../components/Banner';
-import Breadcrumbs from '../components/Breadcrumbs';
-import Checkbox from '../components/Checkbox';
-import Container from '../components/Container';
-import Layout from '../components/Layout/Layout';
-import LayoutOption from '../components/LayoutOption';
-import ProductCardGrid from '../components/ProductCardGrid';
-import Button from '../components/Button';
+import Accordion from '../components/Accordion'
+import Banner from '../components/Banner'
+import Breadcrumbs from '../components/Breadcrumbs'
+import Checkbox from '../components/Checkbox'
+import Container from '../components/Container'
+import Layout from '../components/Layout/Layout'
+import LayoutOption from '../components/LayoutOption'
+import ProductCardGrid from '../components/ProductCardGrid'
+import Button from '../components/Button'
 
-import Config from '../config.json';
-import { generateMockProductData } from '../helpers/mock';
+import Config from '../config.json'
+import { generateMockProductData } from '../helpers/mock'
 
 const ShopV2Page = (props) => {
-  const data = generateMockProductData(9, 'woman');
-  const filters = Config.filters;
+  const data = generateMockProductData(9, 'woman')
+  const filters = Config.filters
 
-  const [filterState, setFilterState] = useState(filters);
+  const [filterState, setFilterState] = useState(filters)
 
   const filterTick = (e, categoryIndex, labelIndex) => {
-    const filterStateCopy = [...filterState];
-    filterStateCopy[categoryIndex].items[labelIndex].value = !e.target.value;
-    setFilterState(filterStateCopy);
-  };
+    const filterStateCopy = [...filterState]
+    filterStateCopy[categoryIndex].items[labelIndex].value = !e.target.value
+    setFilterState(filterStateCopy)
+  }
 
   return (
     <Layout>
@@ -36,7 +36,7 @@ const ShopV2Page = (props) => {
         </Container>
         <Banner
           maxWidth={'650px'}
-          name={`Woman`}
+          name={'Woman'}
           subtitle={
             'Look to our women’s sweaters for modern takes on one-and-done dressing. From midis in bold prints to dramatic floor-sweeping styles and easy all-in-ones, our edit covers every mood.'
           }
@@ -62,16 +62,16 @@ const ShopV2Page = (props) => {
                               name={item.name}
                             />
                           </div>
-                        );
+                        )
                       })}
                     </Accordion>
                   </div>
-                );
+                )
               })}
             </div>
             <div>
               <div className={styles.metaContainer}>
-                <span className={`standardSpan`}>476 items</span>
+                <span className={'standardSpan'}>476 items</span>
               </div>
               <ProductCardGrid height={'440px'} data={data}></ProductCardGrid>
             </div>
@@ -86,7 +86,7 @@ const ShopV2Page = (props) => {
       </div>
       <LayoutOption />
     </Layout>
-  );
-};
+  )
+}
 
-export default ShopV2Page;
+export default ShopV2Page

@@ -1,25 +1,25 @@
-import React, { useState } from 'react';
-import { navigate } from 'gatsby';
+import React, { useState } from 'react'
+import { navigate } from 'gatsby'
 
-import CurrencyFormatter from '../CurrencyFormatter';
-import Icon from '../Icons/Icon';
-import * as styles from './OrderItem.module.css';
-import { toOptimizedImage } from '../../helpers/general';
+import CurrencyFormatter from '../CurrencyFormatter'
+import Icon from '../Icons/Icon'
+import * as styles from './OrderItem.module.css'
+import { toOptimizedImage } from '../../helpers/general'
 
 const OrderItem = (props) => {
-  const { headerStyling, order } = props;
-  const [collapsed, setCollapsed] = useState(false);
+  const { headerStyling, order } = props
+  const [collapsed, setCollapsed] = useState(false)
 
-  let computedTotal = 0;
+  let computedTotal = 0
   for (let x = 0; x < order.items.length; x++) {
     computedTotal =
-      computedTotal + order.items[x].price * order.items[x].quantity;
+      computedTotal + order.items[x].price * order.items[x].quantity
   }
 
   const pad = (str, max) => {
-    str = str.toString();
-    return str.length < max ? pad('0' + str, max) : str;
-  };
+    str = str.toString()
+    return str.length < max ? pad('0' + str, max) : str
+  }
 
   return (
     <div
@@ -120,7 +120,7 @@ const OrderItem = (props) => {
                   <CurrencyFormatter amount={item.quantity * item.price} />
                 </div>
               </div>
-            );
+            )
           })}
         </div>
 
@@ -142,7 +142,7 @@ const OrderItem = (props) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default OrderItem;
+export default OrderItem

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const Heart = () => (
   <svg
@@ -15,6 +15,6 @@ const Heart = () => (
       fill="currentColor"
     />
   </svg>
-);
+)
 
-export default Heart;
+export default Heart

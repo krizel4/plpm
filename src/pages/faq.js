@@ -1,9 +1,9 @@
-import React from 'react';
-import * as styles from './faq.module.css';
+import React from 'react'
+import * as styles from './faq.module.css'
 
-import Layout from '../components/Layout/Layout';
-import Banner from '../components/Banner';
-import Container from '../components/Container';
+import Layout from '../components/Layout/Layout'
+import Banner from '../components/Banner'
+import Container from '../components/Container'
 
 const FaqPage = (props) => {
   return (
@@ -11,7 +11,7 @@ const FaqPage = (props) => {
       <div className={styles.root}>
         <Banner
           maxWidth={'650px'}
-          name={`Frequently Asked Questions`}
+          name={'Frequently Asked Questions'}
           bgImage={'/faqCover.png'}
           color={'var(--standard-white)'}
           height={'350px'}
@@ -113,7 +113,7 @@ const FaqPage = (props) => {
         </Container>
       </div>
     </Layout>
-  );
-};
+  )
+}
 
-export default FaqPage;
+export default FaqPage

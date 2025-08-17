@@ -1,14 +1,14 @@
-import React from 'react';
-import { navigate } from 'gatsby';
+import React from 'react'
+import { navigate } from 'gatsby'
 
-import Button from '../Button';
-import Icon from '../Icons/Icon';
+import Button from '../Button'
+import Icon from '../Icons/Icon'
 
-import * as styles from './Blog.module.css';
-import { toOptimizedImage } from '../../helpers/general';
+import * as styles from './Blog.module.css'
+import { toOptimizedImage } from '../../helpers/general'
 
 const Blog = (props) => {
-  const { title, category, image, alt, children } = props;
+  const { title, category, image, alt, children } = props
   return (
     <div className={styles.root}>
       <span className={styles.category}>{category}</span>
@@ -32,7 +32,7 @@ const Blog = (props) => {
         </Button>
       </div> */}
     </div>
-  );
-};
+  )
+}
 
-export default Blog;
+export default Blog

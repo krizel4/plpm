@@ -1,10 +1,10 @@
-import { navigate } from 'gatsby';
-import React from 'react';
-import * as styles from './ProductCollection.module.css';
-import { toOptimizedImage } from '../../helpers/general';
+import { navigate } from 'gatsby'
+import React from 'react'
+import * as styles from './ProductCollection.module.css'
+import { toOptimizedImage } from '../../helpers/general'
 
 const ProductCollection = (props) => {
-  const { image, title, text, link } = props;
+  const { image, title, text, link } = props
 
   return (
     <div
@@ -19,7 +19,7 @@ const ProductCollection = (props) => {
       </div>
       <div className={styles.overlay}></div>
     </div>
-  );
-};
+  )
+}
 
-export default ProductCollection;
+export default ProductCollection

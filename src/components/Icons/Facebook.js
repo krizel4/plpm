@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const Facebook = () => (
   <svg
@@ -13,6 +13,6 @@ const Facebook = () => (
       fill="currentColor"
     />
   </svg>
-);
+)
 
-export default Facebook;
+export default Facebook

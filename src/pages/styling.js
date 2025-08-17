@@ -1,9 +1,9 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import Button from '../components/Button';
-import Container from '../components/Container';
-import Layout from '../components/Layout/Layout';
-import * as styles from './styling.module.css';
+import Button from '../components/Button'
+import Container from '../components/Container'
+import Layout from '../components/Layout/Layout'
+import * as styles from './styling.module.css'
 
 const StylingPage = () => {
   return (
@@ -72,7 +72,7 @@ const StylingPage = () => {
         </div>
       </Container>
     </Layout>
-  );
-};
+  )
+}
 
-export default StylingPage;
+export default StylingPage

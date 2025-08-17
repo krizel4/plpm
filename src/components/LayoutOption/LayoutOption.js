@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 
-import { navigate } from 'gatsby';
-import Icon from '../Icons/Icon';
-import * as styles from './LayoutOption.module.css';
+import { navigate } from 'gatsby'
+import Icon from '../Icons/Icon'
+import * as styles from './LayoutOption.module.css'
 
 const LayoutOption = (props) => {
   return (
@@ -23,7 +23,7 @@ const LayoutOption = (props) => {
         <Icon symbol={'list'}></Icon>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default LayoutOption;
+export default LayoutOption

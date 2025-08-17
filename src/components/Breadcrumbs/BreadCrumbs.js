@@ -1,15 +1,15 @@
-import React from 'react';
+import React from 'react'
 
-import * as styles from './BreadCrumbs.module.css';
-import Icon from '../Icons/Icon';
+import * as styles from './BreadCrumbs.module.css'
+import Icon from '../Icons/Icon'
 
 const Breadcrumbs = ({ crumbs }) => {
-  let crumbsOutput = crumbs;
+  let crumbsOutput = crumbs
   if (crumbsOutput && typeof crumbsOutput !== 'object') {
     if (crumbsOutput.indexOf('>') > -1) {
-      crumbsOutput = crumbsOutput.split('>');
+      crumbsOutput = crumbsOutput.split('>')
     } else {
-      crumbsOutput = [crumbsOutput];
+      crumbsOutput = [crumbsOutput]
     }
   }
 
@@ -37,7 +37,7 @@ const Breadcrumbs = ({ crumbs }) => {
           </span>
         ))}
     </div>
-  );
-};
+  )
+}
 
-export default Breadcrumbs;
+export default Breadcrumbs

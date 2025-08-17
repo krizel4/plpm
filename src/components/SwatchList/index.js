@@ -1,1 +1,1 @@
-export { default } from './SwatchList';
+export { default } from './SwatchList'

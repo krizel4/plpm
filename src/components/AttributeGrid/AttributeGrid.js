@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 
-import Attribute from '../Attribute';
+import Attribute from '../Attribute'
 
-import * as styles from './AttributeGrid.module.css';
+import * as styles from './AttributeGrid.module.css'
 
 const AttributeGrid = (props) => {
   return (
@@ -23,7 +23,7 @@ const AttributeGrid = (props) => {
         subtitle={'Shop safely'}
       />
     </div>
-  );
-};
+  )
+}
 
-export default AttributeGrid;
+export default AttributeGrid

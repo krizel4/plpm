@@ -1,10 +1,10 @@
-import React from 'react';
-import * as styles from './BlogPreviewGrid.module.css';
+import React from 'react'
+import * as styles from './BlogPreviewGrid.module.css'
 
-import BlogPreview from '../BlogPreview';
+import BlogPreview from '../BlogPreview'
 
 const BlogPreviewGrid = (props) => {
-  const { data, hideReadMoreOnWeb, showExcerpt } = props;
+  const { data, hideReadMoreOnWeb, showExcerpt } = props
   return (
     <div className={styles.root}>
       {data &&
@@ -21,10 +21,10 @@ const BlogPreviewGrid = (props) => {
               hideReadMoreOnWeb={hideReadMoreOnWeb}
               showExcerpt={showExcerpt}
             />
-          );
+          )
         })}
     </div>
-  );
-};
+  )
+}
 
-export default BlogPreviewGrid;
+export default BlogPreviewGrid

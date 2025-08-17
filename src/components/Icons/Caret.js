@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const Caret = () => (
   <svg
@@ -10,6 +10,6 @@ const Caret = () => (
   >
     <path d="M13 1 7 7.462 1 1" stroke="currentColor" strokeLinecap="square" />
   </svg>
-);
+)
 
-export default Caret;
+export default Caret

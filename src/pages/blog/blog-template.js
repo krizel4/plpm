@@ -1,18 +1,18 @@
-import React from 'react';
-import { navigate } from 'gatsby';
+import React from 'react'
+import { navigate } from 'gatsby'
 
-import BlogPreviewGrid from '../../components/BlogPreviewGrid';
-import Container from '../../components/Container';
-import Hero from '../../components/Hero';
-import Layout from '../../components/Layout/Layout';
-import ThemeLink from '../../components/ThemeLink';
+import BlogPreviewGrid from '../../components/BlogPreviewGrid'
+import Container from '../../components/Container'
+import Hero from '../../components/Hero'
+import Layout from '../../components/Layout/Layout'
+import ThemeLink from '../../components/ThemeLink'
 
-import { generateMockBlogData } from '../../helpers/mock';
-import * as styles from './index.module.css';
-import { toOptimizedImage } from '../../helpers/general';
+import { generateMockBlogData } from '../../helpers/mock'
+import * as styles from './index.module.css'
+import { toOptimizedImage } from '../../helpers/general'
 
 const BlogPage = (props) => {
-  const blogData = generateMockBlogData(6);
+  const blogData = generateMockBlogData(6)
 
   return (
     <Layout disablePaddingBottom>
@@ -20,7 +20,7 @@ const BlogPage = (props) => {
         <Hero
           maxWidth={'400px'}
           image={toOptimizedImage('/blogCover.png')}
-          title={`The new standard of Closing`}
+          title={'The new standard of Closing'}
           ctaLink={'read story'}
           ctaTo={'/blog/sample'}
           header={'design'}
@@ -67,7 +67,7 @@ const BlogPage = (props) => {
         </div>
       </div>
     </Layout>
-  );
-};
+  )
+}
 
-export default BlogPage;
+export default BlogPage

@@ -1,1 +1,1 @@
-export { default } from './AttributeGrid';
+export { default } from './AttributeGrid'

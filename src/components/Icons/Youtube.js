@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const Youtube = () => (
   <svg
@@ -16,6 +16,6 @@ const Youtube = () => (
       fill="currentColor"
     />
   </svg>
-);
+)
 
-export default Youtube;
+export default Youtube

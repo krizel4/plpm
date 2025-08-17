@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react'
 
-import Swatch from '../Swatch';
-import * as styles from './SwatchList.module.css';
+import Swatch from '../Swatch'
+import * as styles from './SwatchList.module.css'
 
 const SwatchList = (props) => {
-  const { swatchList, activeSwatch, setActiveSwatch } = props;
+  const { swatchList, activeSwatch, setActiveSwatch } = props
   return (
     <div className={styles.root}>
       <span className={styles.label}>Select Colour: {activeSwatch.title}</span>
@@ -17,11 +17,11 @@ const SwatchList = (props) => {
               setActiveSwatch={setActiveSwatch}
               isActive={activeSwatch === colorChoice}
             />
-          );
+          )
         })}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SwatchList;
+export default SwatchList

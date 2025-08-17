@@ -1,13 +1,13 @@
-import React, { useRef } from 'react';
+import React, { useRef } from 'react'
 
-import Button from '../components/Button';
-import Container from '../components/Container';
-import Hero from '../components/Hero';
-import ThemeLink from '../components/ThemeLink';
-import Layout from '../components/Layout/Layout';
-import InstagramEmbed from "../components/InstagramEmbed";
+import Button from '../components/Button'
+import Container from '../components/Container'
+import Hero from '../components/Hero'
+import ThemeLink from '../components/ThemeLink'
+import Layout from '../components/Layout/Layout'
+import InstagramEmbed from '../components/InstagramEmbed'
 
-import * as styles from './about.module.css';
+import * as styles from './about.module.css'
 
 const AboutPage = (props) => {
   return (
@@ -15,14 +15,14 @@ const AboutPage = (props) => {
       <div className={styles.root}>
         {/* Hero Container */}
         <Hero
-          title={`Minors to Majors Program`}
-          maxWidth={"1024"}
+          title={'Minors to Majors Program'}
+          maxWidth={'1024'}
           image={
-            "https://images.ctfassets.net/xuyebjupxu9b/1zCMd7hRXi8wtOUORzYtvz/df7905f43479bcd9bed83609c5f547a6/m2m-banner.png"
+            'https://images.ctfassets.net/xuyebjupxu9b/1zCMd7hRXi8wtOUORzYtvz/df7905f43479bcd9bed83609c5f547a6/m2m-banner.png'
           }
         />
 
-        <Container size={"large"} spacing={"min"}>
+        <Container size={'large'} spacing={'min'}>
           <div className={styles.content}>
             <span className={styles.h3plustext}>
               <h3>Minors to Majors</h3>
@@ -49,13 +49,13 @@ const AboutPage = (props) => {
             </span>
             <InstagramEmbed
               url="https://www.instagram.com/p/C8zuHmVP7gS/"
-              style={"display: block; margin: 0 auto"}
+              style={'display: block; margin: 0 auto'}
             />
           </div>
         </Container>
       </div>
     </Layout>
-  );
-};
+  )
+}
 
-export default AboutPage;
+export default AboutPage

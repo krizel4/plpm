@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import * as styles from './AddressForm.module.css';
+import React, { useState } from 'react'
+import * as styles from './AddressForm.module.css'
 
-import Button from '../Button';
-import FormInputField from '../FormInputField';
+import Button from '../Button'
+import FormInputField from '../FormInputField'
 
 const AddressForm = (props) => {
-  const { closeForm } = props;
+  const { closeForm } = props
 
   const initialState = {
     name: '',
@@ -13,8 +13,8 @@ const AddressForm = (props) => {
     state: '',
     postal: '',
     country: '',
-    company: '',
-  };
+    company: ''
+  }
 
   const errorState = {
     name: '',
@@ -22,22 +22,22 @@ const AddressForm = (props) => {
     state: '',
     postal: '',
     country: '',
-    company: '',
-  };
+    company: ''
+  }
 
-  const [form, setForm] = useState(initialState);
-  const [errorForm, setErrorForm] = useState(errorState);
+  const [form, setForm] = useState(initialState)
+  const [errorForm, setErrorForm] = useState(errorState)
 
   const handleChange = (id, e) => {
-    const tempForm = { ...form, [id]: e };
-    setForm(tempForm);
-  };
+    const tempForm = { ...form, [id]: e }
+    setForm(tempForm)
+  }
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    setErrorForm(errorState);
-    closeForm();
-  };
+    e.preventDefault()
+    setErrorForm(errorState)
+    closeForm()
+  }
 
   return (
     <div className={styles.root}>
@@ -105,7 +105,7 @@ const AddressForm = (props) => {
         </div>
       </form>
     </div>
-  );
-};
+  )
+}
 
-export default AddressForm;
+export default AddressForm

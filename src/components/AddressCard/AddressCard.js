@@ -1,5 +1,5 @@
-import React from 'react';
-import * as styles from './AddressCard.module.css';
+import React from 'react'
+import * as styles from './AddressCard.module.css'
 
 const AddressCard = (props) => {
   const {
@@ -10,8 +10,8 @@ const AddressCard = (props) => {
     country,
     company,
     showForm,
-    showDeleteForm,
-  } = props;
+    showDeleteForm
+  } = props
 
   return (
     <div className={`${styles.root}`}>
@@ -29,7 +29,7 @@ const AddressCard = (props) => {
         </span>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default AddressCard;
+export default AddressCard

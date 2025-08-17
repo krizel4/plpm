@@ -1,7 +1,7 @@
-import React from 'react';
-import * as styles from './ProductCollectionGrid.module.css';
+import React from 'react'
+import * as styles from './ProductCollectionGrid.module.css'
 
-import ProductCollection from '../ProductCollection';
+import ProductCollection from '../ProductCollection'
 
 const ProductCollectionGrid = (props) => {
   return (
@@ -31,7 +31,7 @@ const ProductCollectionGrid = (props) => {
         link={'/shop'}
       />
     </div>
-  );
-};
+  )
+}
 
-export default ProductCollectionGrid;
+export default ProductCollectionGrid

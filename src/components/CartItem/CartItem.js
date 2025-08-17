@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
-import AdjustItem from '../AdjustItem';
-import CurrencyFormatter from '../CurrencyFormatter';
-import Drawer from '../Drawer';
-import RemoveItem from '../RemoveItem';
-import QuickView from '../QuickView';
+import AdjustItem from '../AdjustItem'
+import CurrencyFormatter from '../CurrencyFormatter'
+import Drawer from '../Drawer'
+import RemoveItem from '../RemoveItem'
+import QuickView from '../QuickView'
 
-import * as styles from './CartItem.module.css';
-import { navigate } from 'gatsby';
-import { toOptimizedImage } from '../../helpers/general';
+import * as styles from './CartItem.module.css'
+import { navigate } from 'gatsby'
+import { toOptimizedImage } from '../../helpers/general'
 
 const CartItem = (props) => {
-  const [showQuickView, setShowQuickView] = useState(false);
-  const { image, alt, color, name, size, price } = props;
+  const [showQuickView, setShowQuickView] = useState(false)
+  const { image, alt, color, name, size, price } = props
 
   return (
     <div className={styles.root}>
@@ -50,7 +50,7 @@ const CartItem = (props) => {
         <QuickView close={() => setShowQuickView(false)} />
       </Drawer>
     </div>
-  );
-};
+  )
+}
 
-export default CartItem;
+export default CartItem

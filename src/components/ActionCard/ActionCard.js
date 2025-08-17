@@ -1,11 +1,11 @@
-import React from 'react';
-import { navigate } from 'gatsby';
-import * as styles from './ActionCard.module.css';
+import React from 'react'
+import { navigate } from 'gatsby'
+import * as styles from './ActionCard.module.css'
 
-import Icon from '../Icons/Icon';
+import Icon from '../Icons/Icon'
 
 const ActionCard = (props) => {
-  const { title, icon, subtitle, link, size } = props;
+  const { title, icon, subtitle, link, size } = props
   return (
     <div
       className={styles.root}
@@ -21,7 +21,7 @@ const ActionCard = (props) => {
         <Icon symbol={'caret'}></Icon>
       </span>
     </div>
-  );
-};
+  )
+}
 
-export default ActionCard;
+export default ActionCard

@@ -1,27 +1,27 @@
-import { Link } from 'gatsby';
-import React, { useState } from 'react';
+import { Link } from 'gatsby'
+import React, { useState } from 'react'
 
-import Accordion from '../Accordion';
-import Container from '../Container';
-import Dropdown from '../Dropdown/Dropdown';
-import FormInputField from '../FormInputField/FormInputField';
-import Icon from '../Icons/Icon';
-import Button from '../Button';
-import Config from '../../config.json';
-import * as styles from './Footer.module.css';
+import Accordion from '../Accordion'
+import Container from '../Container'
+import Dropdown from '../Dropdown/Dropdown'
+import FormInputField from '../FormInputField/FormInputField'
+import Icon from '../Icons/Icon'
+import Button from '../Button'
+import Config from '../../config.json'
+import * as styles from './Footer.module.css'
 
 const Footer = (prop) => {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState('')
 
   const subscribeHandler = (e) => {
-    e.preventDefault();
-    setEmail('');
-    console.log('Subscribe this email: ', email);
-  };
+    e.preventDefault()
+    setEmail('')
+    console.log('Subscribe this email: ', email)
+  }
 
   const handleSocialClick = (platform) => {
-    window.open(Config.social[platform]);
-  };
+    window.open(Config.social[platform])
+  }
 
   const renderLinks = (linkCollection) => {
     return (
@@ -33,15 +33,15 @@ const Footer = (prop) => {
                 {link.text}
               </Link>
             </li>
-          );
+          )
         })}
       </ul>
-    );
-  };
+    )
+  }
 
   return (
     <div className={styles.root}>
-      <Container size={"large"} spacing={"min"}>
+      <Container size={'large'} spacing={'min'}>
         <div className={styles.content}>
           <div className={styles.contentTop}>
             {Config.footerLinks.map((linkCollection, indexLink) => {
@@ -58,14 +58,14 @@ const Footer = (prop) => {
                   <div className={styles.mobileFooterLinks}>
                     <Accordion
                       customStyle={styles}
-                      type={"add"}
+                      type={'add'}
                       title={linkCollection.subTitle}
                     >
                       {renderLinks(linkCollection)}
                     </Accordion>
                   </div>
                 </div>
-              );
+              )
             })}
             <div className={styles.newsLetterContent}>
               <span className={styles.linkTitle}>Visit Us in Person</span>
@@ -145,7 +145,7 @@ const Footer = (prop) => {
         </div>
       </Container>
     </div>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

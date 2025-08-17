@@ -1,10 +1,10 @@
-import React from "react";
-import * as styles from "./index.module.css";
+import React from 'react'
+import * as styles from './index.module.css'
 
-import Blog from "../../components/Blog";
-import Container from "../../components/Container";
-import Layout from "../../components/Layout/Layout";
-import { toOptimizedImage } from "../../helpers/general";
+import Blog from '../../components/Blog'
+import Container from '../../components/Container'
+import Layout from '../../components/Layout/Layout'
+import { toOptimizedImage } from '../../helpers/general'
 
 const SamplePage = (props) => {
   return (
@@ -13,10 +13,10 @@ const SamplePage = (props) => {
         <Container>
           <div className={styles.blogContainer}>
             <Blog
-              category={"design"}
-              title={"Friends of Sydney: Flora Fricker"}
-              image={"/blogFeatured.png"}
-              alt={""}
+              category={'design'}
+              title={'Friends of Sydney: Flora Fricker'}
+              image={'/blogFeatured.png'}
+              alt={''}
             >
               <div className={styles.content}>
                 <p className={styles.excerpt}>
@@ -50,12 +50,12 @@ const SamplePage = (props) => {
               </div>
               <div className={styles.imagesContainer}>
                 <div className={styles.imageContainer}>
-                  <img src={toOptimizedImage("/cloth.png")} alt={"sample1"} />
+                  <img src={toOptimizedImage('/cloth.png')} alt={'sample1'} />
                 </div>
                 <div className={styles.imageContainer}>
                   <img
-                    src={toOptimizedImage("/collections/collection1.png")}
-                    alt={"sample2"}
+                    src={toOptimizedImage('/collections/collection1.png')}
+                    alt={'sample2'}
                   />
                 </div>
               </div>
@@ -92,7 +92,7 @@ const SamplePage = (props) => {
         </Container>
       </div>
     </Layout>
-  );
-};
+  )
+}
 
-export default SamplePage;
+export default SamplePage

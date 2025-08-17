@@ -1,11 +1,11 @@
-import { Link, navigate } from 'gatsby';
-import React from 'react';
+import { Link, navigate } from 'gatsby'
+import React from 'react'
 
-import Button from '../Button';
-import CurrencyFormatter from '../CurrencyFormatter';
-import MiniCartItem from '../MiniCartItem';
+import Button from '../Button'
+import CurrencyFormatter from '../CurrencyFormatter'
+import MiniCartItem from '../MiniCartItem'
 
-import * as styles from './MiniCart.module.css';
+import * as styles from './MiniCart.module.css'
 
 const MiniCart = (props) => {
   const sampleCartItem = {
@@ -14,8 +14,8 @@ const MiniCart = (props) => {
     name: 'Lambswool Crew Neck Jumper',
     price: 220,
     color: 'Anthracite Melange',
-    size: 'xs',
-  };
+    size: 'xs'
+  }
 
   return (
     <div className={styles.root}>
@@ -45,7 +45,7 @@ const MiniCart = (props) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default MiniCart;
+export default MiniCart
