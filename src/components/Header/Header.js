@@ -30,8 +30,8 @@ const Header = (prop) => {
   const bannerMessage = 'PROUDLY LOCATED IN ANTELOPE VALLEY, CA';
   const searchSuggestions = [
     'Vendor Directory',
-    'Upcoming Events',
-    'Minors to Majors Program',
+    'Small Business Resources',
+    'How to Join',
   ];
 
   const handleHover = (navObject) => {
@@ -83,12 +83,13 @@ const Header = (prop) => {
       <div className={styles.headerMessageContainer}>
         <span>{bannerMessage}</span>
       </div>
-      <Container size={'large'} spacing={'min'}>
+      <Container size={"large"} spacing={"min"}>
         {/* header container */}
         <div className={styles.header}>
+          <Brand className={styles.logo} />
           <div className={styles.linkContainer}>
             <nav
-              role={'presentation'}
+              role={"presentation"}
               onMouseLeave={() => {
                 setShowMenu(false);
               }}
@@ -98,7 +99,7 @@ const Header = (prop) => {
                   key={navObject.menuLink}
                   onMouseEnter={() => handleHover(navObject)}
                   className={`${styles.navLink} ${
-                    activeMenu === navObject.menuLabel ? styles.activeLink : ''
+                    activeMenu === navObject.menuLabel ? styles.activeLink : ""
                   }`}
                   to={navObject.menuLink}
                 >
@@ -108,16 +109,15 @@ const Header = (prop) => {
             </nav>
           </div>
           <div
-            role={'presentation'}
+            role={"presentation"}
             onClick={() => {
               setMobileMenu(!mobileMenu);
               // setDepth(0);
             }}
             className={styles.burgerIcon}
           >
-            <Icon symbol={`${mobileMenu === true ? 'cross' : 'burger'}`}></Icon>
+            <Icon symbol={`${mobileMenu === true ? "cross" : "burger"}`}></Icon>
           </div>
-          <Brand />
           <div className={styles.actionContainers}>
             <button
               aria-label="Search"
@@ -126,21 +126,21 @@ const Header = (prop) => {
                 setShowSearch(!showSearch);
               }}
             >
-              <Icon symbol={'search'}></Icon>
+              <Icon symbol={"search"}></Icon>
             </button>
-            <Link
+            {/* <Link
               aria-label="Favorites"
               href="/account/favorites"
               className={`${styles.iconContainer} ${styles.hideOnMobile}`}
             >
-              <Icon symbol={'heart'}></Icon>
+              <Icon symbol={"heart"}></Icon>
             </Link>
             <Link
               aria-label="Orders"
-              href={isAuth() ? '/login' : '/account/orders/'}
+              href={isAuth() ? "/login" : "/account/orders/"}
               className={`${styles.iconContainer} ${styles.hideOnMobile}`}
             >
-              <Icon symbol={'user'}></Icon>
+              <Icon symbol={"user"}></Icon>
             </Link>
             <button
               aria-label="Cart"
@@ -150,14 +150,14 @@ const Header = (prop) => {
                 setMobileMenu(false);
               }}
             >
-              <Icon symbol={'bag'}></Icon>
+              <Icon symbol={"bag"}></Icon>
               <div className={styles.bagNotification}>
                 <span>1</span>
               </div>
             </button>
             <div className={styles.notificationContainer}>
               <AddNotification openCart={() => setShowMiniCart(true)} />
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -171,18 +171,18 @@ const Header = (prop) => {
           <form className={styles.searchForm} onSubmit={(e) => handleSearch(e)}>
             <FormInputField
               ref={searchRef}
-              icon={'arrow'}
-              id={'searchInput'}
+              icon={"arrow"}
+              id={"searchInput"}
               value={search}
-              placeholder={''}
-              type={'text'}
+              placeholder={""}
+              type={"text"}
               handleChange={(_, e) => setSearch(e)}
             />
           </form>
           <div className={styles.suggestionContianer}>
             {searchSuggestions.map((suggestion, index) => (
               <p
-                role={'presentation'}
+                role={"presentation"}
                 onClick={() => {
                   setShowSearch(false);
                   navigate(`/search?q=${suggestion}`);
@@ -195,7 +195,7 @@ const Header = (prop) => {
             ))}
           </div>
           <div
-            role={'presentation'}
+            role={"presentation"}
             onClick={(e) => {
               e.stopPropagation();
               setShowSearch(false);
@@ -207,14 +207,14 @@ const Header = (prop) => {
 
       {/* menu container */}
       <div
-        role={'presentation'}
+        role={"presentation"}
         onMouseLeave={() => setShowMenu(false)}
         onMouseEnter={() => setShowMenu(true)}
         className={`${styles.menuContainer} ${
-          showMenu === true ? styles.show : ''
+          showMenu === true ? styles.show : ""
         }`}
       >
-        <Container size={'large'} spacing={'min'}>
+        <Container size={"large"} spacing={"min"}>
           <ExpandedMenu menu={menu} />
         </Container>
       </div>
@@ -228,7 +228,7 @@ const Header = (prop) => {
       <div className={styles.mobileMenuContainer}>
         <Drawer
           hideCross
-          top={'98px'}
+          top={"98px"}
           isReverse
           visible={mobileMenu}
           close={() => setMobileMenu(false)}

@@ -1,10 +1,7 @@
-.root {
-    width: 100%;
-}
-
-/* special case with the image */
-.root > div {
-    background-position: right;
+.centerButton {
+    display: block;
+    margin: 0 auto;
+    max-width: 175px;
 }
 
 .navContainer {
@@ -14,7 +11,7 @@
     border-bottom: 1px solid var(--bg-light-gray);
     position: sticky;
     gap: 48px;
-    top: 150px;
+    top: 0%;
     background-color: var(--standard-white);
     overflow-x: auto;
     padding-left: 32px;
@@ -32,16 +29,19 @@
 }
 
 .detailContainer {
-    margin-left: auto;
-    max-width: 800px;
-    margin-top: 164px;
+    padding: 4%;
+    width: 75%;
+    margin: 0 auto;
+    display: block;
 }
 
-.detailContainer p{
+
+.detailContainer p {
     font-family: var(--standard-header);
-    font-weight: normal;
+    font-weight: 200;
     font-size: 42px;
-    line-height: 50px;
+    font-style: italic;
+    line-height: 1.2em;
 }
 
 .imageContainer {
@@ -55,17 +55,20 @@
     object-fit: cover;
 }
 
+.h3plustext {
+    padding-right: 10%;
+}
+
 .content {
     display: grid;
     grid-template-columns: 2fr 3fr;
     gap: 80px 0px;
+    padding: 10%;
 }
 
-.content h3{
+.detailContainer h3{
     font-weight: normal;
-    font-size: 52px;
-    line-height: 62px;
-    margin-right: 40px;
+    margin-bottom: 30px;
 }
 
 .content p {
@@ -103,7 +106,7 @@
 }
 
 @media (max-width:1050px) {
-    .content img {
+    .content img { 
         width: 100%;
     }
 
@@ -139,6 +142,7 @@
         height: 240px;
     }
 
+
     .imageContainer img {
         height: 100%;
     }
@@ -149,10 +153,6 @@
 }
 
 @media (max-width: 800px) {
-    .navContainer {
-        top: 90px;
-    }
-
     .imageContainer {
         padding-bottom: 100px;
     }

@@ -1,16 +1,18 @@
 import React, { useRef } from 'react';
 
+import Button from '../components/Button';
 import Container from '../components/Container';
 import Hero from '../components/Hero';
 import ThemeLink from '../components/ThemeLink';
 import Layout from '../components/Layout/Layout';
+import InstagramEmbed from "../components/InstagramEmbed";
 
 import * as styles from './about.module.css';
-import { toOptimizedImage } from '../helpers/general';
+
 const AboutPage = (props) => {
-  let historyRef = useRef();
-  let valuesRef = useRef();
-  let sustainabilityRef = useRef();
+  let visionRef = useRef();
+  let missionRef = useRef();
+  let m2mRef = useRef();
 
   const handleScroll = (elementReference) => {
     if (elementReference) {
@@ -26,101 +28,91 @@ const AboutPage = (props) => {
       <div className={styles.root}>
         {/* Hero Container */}
         <Hero
-          maxWidth={'900px'}
-          image={'/about.png'}
-          title={`Sydney \n A British brand since 1860`}
+          style={{ filter: "blur(4px)" }}
+          title={`Pretty Little Poppy \n est. 2022`}
+          maxWidth={"1024"}
+          image={
+            "https://images.ctfassets.net/xuyebjupxu9b/2VZ1I8yzTtHh12m8p2ZaTE/28790671434e620d75f49920c49d9e0c/Pretty-little-poppy-marketplace-Lancaster-ca-antelope-valley-enhanced.png"
+          }
         />
 
         <div className={styles.navContainer}>
-          <ThemeLink onClick={() => handleScroll(historyRef)} to={'#history'}>
-            History
+          <ThemeLink onClick={() => handleScroll(visionRef)} to={"#vision"}>
+            Our Vision
           </ThemeLink>
-          <ThemeLink onClick={() => handleScroll(valuesRef)} to={'#values'}>
-            Values
+          <ThemeLink onClick={() => handleScroll(missionRef)} to={"#mission"}>
+            Our Mission
           </ThemeLink>
           <ThemeLink
-            onClick={() => handleScroll(sustainabilityRef)}
-            to={'#sustainability'}
+            onClick={() => handleScroll(m2mRef)}
+            to={"#majors"}
           >
-            Sustainability
+            Our Impact
           </ThemeLink>
         </div>
 
-        <Container size={'large'} spacing={'min'}>
-          <div className={styles.detailContainer} ref={historyRef}>
+        <Container size={"large"} spacing={"min"}>
+          <div className={styles.detailContainer} ref={visionRef}>
+            <h3>Our Vision is...</h3>
             <p>
-              Founded in 1860, Sydney is an innovative British brand with a
-              contemporary edge. We make timeless everyday luxury clothing.
-            </p>
-            <br />
-            <br />
-            <p>
-              We created some of the world's first T-shirts and spent decades
-              perfecting the feel of the cotton. Today we are the only brand
-              that makes T-shirts in its own factory in the UK. And we do this
-              in the same factory we have occupied since 1937.
+              To see dreamers take root, grow as doers, and blossom into
+              difference-makers &mdash; cultivating meaningful change in their
+              communities.
             </p>
           </div>
         </Container>
 
-        <div className={styles.imageContainer}>
-          <img alt={'shirt brand'} src={toOptimizedImage('/about1.png')}></img>
+        <div>
+          <Hero video="https://videos.ctfassets.net/xuyebjupxu9b/4QdstqaZNnMw1U9XalDKmE/6f710ae260fbfd0cef225caf33a3f61a/pretty-little-poppy-marketplace-vendors.mp4" />
         </div>
 
-        <Container size={'large'} spacing={'min'}>
+        <Container size={"large"} spacing={"min"}>
           <div className={styles.content}>
-            <h3>Our Values</h3>
-            <div ref={valuesRef}>
+            <h3>Our Mission</h3>
+            <div ref={missionRef}>
               <p>
-                Sunspel produced some of the world's earliest T-shirts. In the
-                late 1800s the business made luxury tunics and undershirts from
-                lightweight Sea Island cotton for export to the Far East and
-                other warm climates. While these garments initially had silk
-                buttoned plackets, these were removed in the early 1900s and
-                replaced with simple bound necks to reduce manufacturing costs -
-                creating the T-shirt. We've supplied the world as the T-shirt
-                has evolved from underwear to outerwear, from symbol of youthful
-                rebellion to everyday wardrobe staple, and we've spent decades
-                refining its every last aspect.
+                Pretty Little Poppy Marketplace provides creators and small
+                business owners with space, resources, and a supportive
+                community to grow their craft, share their passion, and
+                thrive—starting in Lancaster and blooming beyond.
               </p>
               <ol>
-                <li>Be an ecowear</li>
-                <li>Sophisticated and not mass-produced</li>
-                <li>Only natural materials</li>
+                <li>Dreamers</li>
+                <li>Doers</li>
+                <li>Difference-Makers</li>
               </ol>
-              <img alt={'founder'} src={toOptimizedImage('/about2.png')}></img>
+
+              <Button 
+                level="primary"
+                className={styles.centerButton}
+                href="/contact"
+              >Join the Marketplace</Button>
             </div>
-            <h3>Sustainability</h3>
-            <div id={'#sustainability'} ref={sustainabilityRef}>
+            <span className={styles.h3plustext} ref={m2mRef}>
+              <h3>Minors to Majors</h3>
+              <br />
               <p>
-                Our founder, Thomas Hill, had both an eye for quality and a
-                desire to innovate. As well as using the finest fibres such as
-                Sea Island cotton, cashmere and silk, he invented his own
-                fabrics. Sunspel continues this commitment to innovation today
-                and our unique fabrics include: Q100 Sea Island cotton, Q82
-                Supima cotton, Q75 warp knit mesh cotton and Q14 warp knit
-                cellular cotton. The technology behind these fabrics remains
-                unchanged today and all Sunspel products use the finest cottons,
-                wools and fibres.
+                Pretty Little Poppy Marketplace’s Minors to Majors youth program gives local
+                young creators the tools, knowledge, and opportunities to
+                explore entrepreneurship. Participants learn the basics of
+                building a small business, from product development to customer
+                engagement, and gain real experience by selling their work in
+                our marketplace. The program also connects them with other
+                motivated youth, building a supportive network where ideas and
+                skills can grow. It’s a hands-on way to help the next generation
+                turn their creativity into confidence and impact.
               </p>
-              <p>
-                Made in Long Eaton, England and crafted from our luxurious long
-                staple Supima cotton for unparalleled softness, comfort and
-                durability, the Sunspel T-shirt has a classic fit and only the
-                most essential details.{' '}
-              </p>
-              <p>
-                With over 100 years spent perfecting fabric, fit and style, the
-                Sunspel Classic T-shirt is recognised as the finest in the
-                world.
-              </p>
-            </div>
+              <Button
+                level="primary" className={styles.centerButton}
+                href="/youngpreneurs-program-antelope-valley-ca"
+              >Find Out More</Button>
+            </span>
+            <InstagramEmbed
+              url="https://www.instagram.com/reel/DCnWYt_ymvW/"
+              style={"display: block; margin: 0 auto"}
+            />
           </div>
         </Container>
-
-        <div className={styles.imageContainer}>
-          <img alt={'shirt backwards'} src={toOptimizedImage('/about3.png')}></img>
-        </div>
       </div>
     </Layout>
   );

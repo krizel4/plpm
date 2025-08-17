@@ -41,7 +41,7 @@ const Footer = (prop) => {
 
   return (
     <div className={styles.root}>
-      <Container size={'large'} spacing={'min'}>
+      <Container size={"large"} spacing={"min"}>
         <div className={styles.content}>
           <div className={styles.contentTop}>
             {Config.footerLinks.map((linkCollection, indexLink) => {
@@ -58,7 +58,7 @@ const Footer = (prop) => {
                   <div className={styles.mobileFooterLinks}>
                     <Accordion
                       customStyle={styles}
-                      type={'add'}
+                      type={"add"}
                       title={linkCollection.subTitle}
                     >
                       {renderLinks(linkCollection)}
@@ -67,12 +67,24 @@ const Footer = (prop) => {
                 </div>
               );
             })}
-            <div className={styles.newsLetter}>
+            <div className={styles.newsLetterContent}>
+              <span className={styles.linkTitle}>Visit Us in Person</span>
+              <div className={styles.promoMessage}>
+                <p>
+                  730 W Lancaster Blvd Suite 105
+                  <br /> Lancaster, CA 93535
+                </p>
+                <p>
+                  <b>Days Open:</b> Tuesdays thru Saturday<br />
+                  <b>Hours:</b> 11:00am - 6:00pm
+                </p>
+              </div>
+            </div>
+            {/* <div className={styles.newsLetter}>
               <div className={styles.newsLetterContent}>
                 <span className={styles.linkTitle}>Newsletter</span>
                 <p className={styles.promoMessage}>
-                  Get 15% off your first purchase! Plus, be the first to know
-                  about sales, new product launches and exclusive offers!
+                  Stay up-to-date with future PLPM events and opportunities.
                 </p>
                 <form
                   className={styles.newsLetterForm}
@@ -128,58 +140,10 @@ const Footer = (prop) => {
                   )}
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </Container>
-      <div className={styles.contentBottomContainer}>
-        <Container size={'large'} spacing={'min'}>
-          <div className={styles.contentBottom}>
-            <div className={styles.settings}>
-              <Dropdown
-                label={'Country/Region'}
-                optionList={Config.currencyList}
-              />
-              <Dropdown label={'Language'} optionList={Config.languageList} />
-            </div>
-            <div className={styles.copyrightContainer}>
-              <div className={styles.creditCardContainer}>
-                {Config.paymentOptions.amex && (
-                  <img
-                    className={styles.amexSize}
-                    src={'/amex.png'}
-                    alt={'amex'}
-                  ></img>
-                )}
-                {Config.paymentOptions.mastercard && (
-                  <img
-                    className={styles.masterSize}
-                    src={'/master.png'}
-                    alt={'mastercard'}
-                  ></img>
-                )}
-                {Config.paymentOptions.visa && (
-                  <img
-                    className={styles.visaSize}
-                    src={'/visa.png'}
-                    alt={'visa'}
-                  ></img>
-                )}
-              </div>
-              <span>
-                {new Date().getFullYear()} (c) . Built by{' '}
-                <Button target={true} href="https://www.matterdesign.com.au/">
-                  Matter.
-                </Button>{' '}
-                Powered by{' '}
-                <Button target={true} href="https://jamm.matter.design/">
-                  JAMM.™
-                </Button>
-              </span>
-            </div>
-          </div>
-        </Container>
-      </div>
     </div>
   );
 };

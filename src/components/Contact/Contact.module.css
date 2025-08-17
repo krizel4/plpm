@@ -1,4 +1,6 @@
 .root {
+    margin: 10%;
+    padding: 0 20%;
 }
 
 .section:first-child {
@@ -13,7 +15,6 @@
     font-weight: normal;
     font-size: 32px;
     line-height: 26px;
-    margin-bottom: 32px;
 }
 
 .section p {
@@ -41,7 +42,15 @@
     margin-top: 32px;
 }
 
-@media (max-width: 800px) {
+.centerText {
+    text-align: center;
+    margin-top: 7%;
+}
+
+@media (max-width: 960px) {
+    .root {
+        padding: 0 10%;
+    }
     .contactForm {
         grid-template-columns: 1fr;
     }

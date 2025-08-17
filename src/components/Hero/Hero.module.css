@@ -1,100 +1,51 @@
 .root {
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 90vh;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: var(--standard-white);
     position: relative;
     overflow: hidden;
+    height: 80vh;
 }
 
-.content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: var(--standard-black);   
-    width: 600px;
-    gap: 40px;
-    background-color: #ffffffaf;
-    padding: 5% 0;
-    margin-top: 0%;
+.bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    filter: var(4px, none);
 }
 
-.title {
-    font-size: 34px;
-    line-height: 1.2em;
-    font-weight: normal;
-    text-align: center;
-    white-space: pre-wrap;
-    padding: 20px;
-}
-
-.subtitle {
-    padding: 0 10%;;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 1.4em;
-    text-align: center;
-}
-
-.ctaButton {
-    width: 180px;
-    
-}
-
-.ctaLink {
-    
-    text-transform: uppercase;
-    color: var(--standard-white);
-    border-bottom: 1px solid var(--standard-white);
-
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-}
-
-.header {
-    color: var(--standard-white);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-    text-transform: uppercase;
+.videoContainer {
+    display: block;
 }
 
 .videoBackground {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1;
 }
 
-@media (max-width: 800px) {
+span .subtitle {
+    margin: 20px 0;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    top: 30%;
+    text-align: center;
+    white-space: pre-line;
+    text-shadow: 1px 0px 20px rgb(93, 93, 93);
+}
+
+@media (max-width: 1024px) {
     .root {
-        min-height: 50vh;
+        background-position: 50% 30%;
+        height: 40vh;
     }
 
-    .title {
-        font-size: 42px;
-        line-height: 50px;
-    }
-
-    .subtitle {
-        font-size: 14px;
-        line-height: 17px;
-    }
-}
-
-@media (max-width: 500px) {
     .content {
-        padding: 0px 32px;
+        top: 25%;
     }
 }
