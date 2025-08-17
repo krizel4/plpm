@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 
-import Layout from '../components/Layout/Layout'
+import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 
 import * as styles from '../components/Contact/Contact.module.css'
