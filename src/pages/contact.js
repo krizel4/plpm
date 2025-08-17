@@ -1,6 +1,8 @@
 import React, { useRef } from 'react'
 
 import Layout from '../components/Layout/Layout'
+import Contact from '../components/Contact'
+
 import * as styles from '../components/Contact/Contact.module.css'
 
 const ContactPage = () => {

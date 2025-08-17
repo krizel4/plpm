@@ -3,8 +3,6 @@ import Button from '../Button'
 
 import FormInputField from '../FormInputField/FormInputField'
 
-import * as styles from './Contact.module.css'
-
 const Contact = (props) => {
   const [interests, setInterests] = useState([])
 
@@ -30,7 +28,7 @@ const Contact = (props) => {
   }
 
   return (
-    <div className={styles.root}>
+    <div>
       <div className={styles.section}>
         <h4>We're so glad you're reaching out.</h4>
         <p>
