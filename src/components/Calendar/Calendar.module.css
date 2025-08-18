@@ -6,11 +6,23 @@
     background-color: var(--brand-poppy);
 }
 
+/* right-hand side preview/video container (kept) */
 .sharedContainer {
     display: block;
     margin: 0 auto;
     max-width: 400px;
     width: 100%;
+}
+
+/* NEW: responsive video styling */
+.previewVideo {
+    display: block;
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    border-radius: 12px;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
 }
 
 .calendarWrapper {
@@ -25,6 +37,54 @@
     align-items: center;
 }
 
+/* optional helper that was referenced in JSX */
 .hidden {
     display: none;
+}
+
+/* ====== breakpoints ====== */
+
+/* tablets: compress padding, smaller gap */
+@media (max-width: 1024px) {
+    .calendarWrapper {
+        gap: 1.25rem;
+        padding: 1.25rem;
+    }
+}
+
+/* tablets & down: stack to one column */
+@media (max-width: 900px) {
+    .calendarWrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .sharedContainer {
+        max-width: 100%;
+    }
+}
+
+/* phones: compact padding, smaller toolbar/title */
+@media (max-width: 640px) {
+    .calendarWrapper {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    :global(.fc .fc-toolbar) {
+        flex-wrap: wrap;
+        gap: .5rem;
+    }
+
+    :global(.fc .fc-toolbar-title) {
+        font-size: 1.05rem;
+    }
+
+    :global(.fc .fc-button) {
+        padding: .3rem .5rem;
+        font-size: .85rem;
+    }
+
+    :global(.fc .fc-daygrid-day-number) {
+        font-size: .85rem;
+    }
 }

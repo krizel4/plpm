@@ -32,15 +32,12 @@ const events = [
 
 export function CalendarApp () {
   const calendarRef = useRef()
+  const [selectedEvent, setSelectedEvent] = useState(null)
 
   useEffect(() => {
-    const calendarApi = calendarRef.current?.getApi()
-    if (calendarApi) {
-      calendarApi.updateSize()
-    }
+    const api = calendarRef.current?.getApi()
+    if (api) api.updateSize()
   }, [])
-
-  const [selectedEvent, setSelectedEvent] = useState(null)
 
   const handleEventClick = (info) => {
     setSelectedEvent(info.event.extendedProps)
@@ -49,7 +46,7 @@ export function CalendarApp () {
   return (
     <div className={styles.calendarWrapper} id="upcoming-events">
       <div className={styles.calendarContainer}>
-        <h3>Upcoming Pretty Poppy Events</h3>
+        <h4>Upcoming Pretty Poppy Events</h4>
         <FullCalendar
           ref={calendarRef}
           plugins={[dayGridPlugin]}
@@ -58,6 +55,10 @@ export function CalendarApp () {
           events={events}
           eventContent={renderEventContent}
           eventClick={handleEventClick}
+          /* NEW: better mobile responsiveness */
+          height="auto"
+          handleWindowResize={true}
+          windowResizeDelay={100}
           dayCellDidMount={(info) => {
             const day = info.date.getDay()
             if (day === 0 || day === 1) {
@@ -66,21 +67,20 @@ export function CalendarApp () {
           }}
         />
       </div>
+
       <div className={styles.sharedContainer}>
-        <p
-          className={`${styles.disappear} ${
-            selectedEvent ? styles.hidden : ''
-          }`}
-        >
-          Click an event on the left to get more information.
-        </p>
+        <h4 className={`${styles.disappear} ${selectedEvent ? styles.hidden : ''}`}>
+          Click an event on the left for more information.
+        </h4>
         {selectedEvent?.videoUrl && (
           <video
-            className={styles.sharedContainer}
+            className={styles.previewVideo}
             src={selectedEvent.videoUrl}
             autoPlay
             loop
             playsInline
+            muted
+            controls={false}
           />
         )}
       </div>

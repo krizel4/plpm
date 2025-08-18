@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Button from '../Button'
 
 import FormInputField from '../FormInputField/FormInputField'
+import * as styles from './Contact.module.css'
 
 const Contact = (props) => {
   const [interests, setInterests] = useState([])

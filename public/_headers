@@ -1,0 +1,260 @@
+
+# gatsby-adapter-netlify start
+/*
+  cache-control: public, max-age=0, must-revalidate
+  x-xss-protection: 1; mode=block
+  x-content-type-options: nosniff
+  referrer-policy: same-origin
+  x-frame-options: DENY
+/static/*
+  cache-control: public, max-age=31536000, immutable
+/framework-0ae7bf598d0f66ca0ff8.js
+  cache-control: public, max-age=31536000, immutable
+/framework-0ae7bf598d0f66ca0ff8.js.LICENSE.txt
+  cache-control: public, max-age=31536000, immutable
+/framework-0ae7bf598d0f66ca0ff8.js.map
+  cache-control: public, max-age=31536000, immutable
+/cdfd8999-f0929e264279dc58fe29.js
+  cache-control: public, max-age=31536000, immutable
+/cdfd8999-f0929e264279dc58fe29.js.map
+  cache-control: public, max-age=31536000, immutable
+/styles.b8ded3da549505d64dc0.css/
+  cache-control: public, max-age=31536000, immutable
+/941c7ed8ca04e96aa37b2f168c69664f37ce9fe0-d1c615734f3e1dfbc872.js
+  cache-control: public, max-age=31536000, immutable
+/941c7ed8ca04e96aa37b2f168c69664f37ce9fe0-d1c615734f3e1dfbc872.js.map
+  cache-control: public, max-age=31536000, immutable
+/4ce73e4101f2311cf35c845018197efb79f326d0-abd5897d08ad29007381.js
+  cache-control: public, max-age=31536000, immutable
+/4ce73e4101f2311cf35c845018197efb79f326d0-abd5897d08ad29007381.js.LICENSE.txt
+  cache-control: public, max-age=31536000, immutable
+/4ce73e4101f2311cf35c845018197efb79f326d0-abd5897d08ad29007381.js.map
+  cache-control: public, max-age=31536000, immutable
+/app-592393bba1d538d21cdd.js
+  cache-control: public, max-age=31536000, immutable
+/app-592393bba1d538d21cdd.js.LICENSE.txt
+  cache-control: public, max-age=31536000, immutable
+/app-592393bba1d538d21cdd.js.map
+  cache-control: public, max-age=31536000, immutable
+/7b6dfb97f3023730378e9fea33b58ecdfba36a26-aca77060abadb8695f00.js
+  cache-control: public, max-age=31536000, immutable
+/7b6dfb97f3023730378e9fea33b58ecdfba36a26-aca77060abadb8695f00.js.map
+  cache-control: public, max-age=31536000, immutable
+/f85343eaaf3aca9217281c47be412e00d15aaaa2-c03d7f626b8cefc33f76.js
+  cache-control: public, max-age=31536000, immutable
+/f85343eaaf3aca9217281c47be412e00d15aaaa2-c03d7f626b8cefc33f76.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-cart-js-027fd7da52c2fd03c94e.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-cart-js-027fd7da52c2fd03c94e.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-account-favorites-js-1334f40e62469e5d4585.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-account-favorites-js-1334f40e62469e5d4585.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-blog-blog-template-js-765d3349e77e5e07f908.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-blog-blog-template-js-765d3349e77e5e07f908.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-blog-index-js-620bcc13694c99020b01.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-blog-index-js-620bcc13694c99020b01.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-under-construction-js-218d1d97dc26e598afc9.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-under-construction-js-218d1d97dc26e598afc9.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-index-template-js-2a41154401199b868095.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-index-template-js-2a41154401199b868095.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-support-js-bc369214d57ad0193d05.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-support-js-bc369214d57ad0193d05.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-ccpa-js-2907c79fb8c0a62b7a0e.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-ccpa-js-2907c79fb8c0a62b7a0e.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-vendors-clothing-accessories-js-9baba4f61ed7956e9330.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-vendors-clothing-accessories-js-9baba4f61ed7956e9330.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-vendors-pretty-little-things-js-c344943b2df5ec5d862e.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-vendors-pretty-little-things-js-c344943b2df5ec5d862e.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-vendors-entire-directory-js-808db5d80bf937c8824f.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-vendors-entire-directory-js-808db5d80bf937c8824f.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-vendors-beauty-wellness-js-c96f28263aec2ced1385.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-vendors-beauty-wellness-js-c96f28263aec2ced1385.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-vendors-all-clothing-js-5ee889ebe936dce16b47.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-vendors-all-clothing-js-5ee889ebe936dce16b47.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-vendors-aromatherapy-js-1a223b0e8f17854df342.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-vendors-aromatherapy-js-1a223b0e8f17854df342.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-vendors-accessories-js-75830c043a12b3d65588.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-vendors-accessories-js-75830c043a12b3d65588.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-vendors-bags-purses-js-a5e1f5172d471361c602.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-vendors-bags-purses-js-a5e1f5172d471361c602.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-vendors-stationary-js-93860812d5825288e079.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-vendors-stationary-js-93860812d5825288e079.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-vendors-drinkware-js-2b2ae35221a09fb16bf8.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-vendors-drinkware-js-2b2ae35221a09fb16bf8.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-vendors-toys-games-js-19b533684488682f8a49.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-vendors-toys-games-js-19b533684488682f8a49.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-vendors-jewelry-js-13d40c34a912b4d4e272.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-vendors-jewelry-js-13d40c34a912b4d4e272.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-vendors-skincare-js-be6581278615bd7a172b.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-vendors-skincare-js-be6581278615bd7a172b.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-vendors-sweets-js-a6a9d73ccf770986e6f2.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-vendors-sweets-js-a6a9d73ccf770986e6f2.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-vendors-soaps-js-1d4019290eedf22321ab.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-vendors-soaps-js-1d4019290eedf22321ab.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-vendors-decor-js-e4a99ac91920b00affa4.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-vendors-decor-js-e4a99ac91920b00affa4.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-shop-js-961f5db971d52f5c07b0.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-shop-js-961f5db971d52f5c07b0.js.map
+  cache-control: public, max-age=31536000, immutable
+/webpack-runtime-ffd4b27fc77095ff48ba.js
+  cache-control: public, max-age=31536000, immutable
+/webpack-runtime-ffd4b27fc77095ff48ba.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-account-orders-js-260fdb754e38e545a3f2.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-account-orders-js-260fdb754e38e545a3f2.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-search-js-eb4b18d9fec9e2455997.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-search-js-eb4b18d9fec9e2455997.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-about-js-b1230e15f40ea134d126.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-about-js-b1230e15f40ea134d126.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-product-sample-js-06eebf3295e0bd89eae1.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-product-sample-js-06eebf3295e0bd89eae1.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-account-address-js-d1af9daedf35c26334af.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-account-address-js-d1af9daedf35c26334af.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-how-to-use-js-03af73522282d1f89bd0.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-how-to-use-js-03af73522282d1f89bd0.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-minorstomajors-js-9d205998c3e741079a04.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-minorstomajors-js-9d205998c3e741079a04.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-shop-v-2-js-6f722e534a6910ea97f1.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-shop-v-2-js-6f722e534a6910ea97f1.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-faq-js-085dd4972f0d92ef3e1b.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-faq-js-085dd4972f0d92ef3e1b.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-blog-sample-js-afd1ce02be1f65236be0.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-blog-sample-js-afd1ce02be1f65236be0.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-account-settings-js-a74acacbd9fd30813ee6.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-account-settings-js-a74acacbd9fd30813ee6.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-join-pop-up-js-999bd40d669574eb064c.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-join-pop-up-js-999bd40d669574eb064c.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-contact-js-cecd13079d2e5ed1fe6f.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-contact-js-cecd13079d2e5ed1fe6f.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-login-js-12a692e907d9a81ed5e9.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-login-js-12a692e907d9a81ed5e9.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-signup-js-2bc106f25405cdf54981.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-signup-js-2bc106f25405cdf54981.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-youngpreneurs-program-antelope-valley-ca-js-fb8d154c4ed201f4ab53.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-youngpreneurs-program-antelope-valley-ca-js-fb8d154c4ed201f4ab53.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-index-js-e492f909f0f788ee3034.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-index-js-e492f909f0f788ee3034.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-account-viewed-js-e6cd19072f0addee9227.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-account-viewed-js-e6cd19072f0addee9227.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-blog-events-js-2d09b4c563ebc399008d.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-blog-events-js-2d09b4c563ebc399008d.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-events-js-fa50a3ecafe59da99e57.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-events-js-fa50a3ecafe59da99e57.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-styling-js-2528a2d50f01b1826668.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-styling-js-2528a2d50f01b1826668.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-forgot-js-a5ee811bff080e4662a2.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-forgot-js-a5ee811bff080e4662a2.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-order-confirm-js-c3a992faf44ddcca6d53.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-order-confirm-js-c3a992faf44ddcca6d53.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-account-success-js-41332933a08adb230889.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-account-success-js-41332933a08adb230889.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-404-js-308f73f3324ec942280d.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-404-js-308f73f3324ec942280d.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-account-index-js-6a0eb3891597fee361f6.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-account-index-js-6a0eb3891597fee361f6.js.map
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-calendar-js-e83a51fac0792e4a20c7.js
+  cache-control: public, max-age=31536000, immutable
+/component---src-pages-calendar-js-e83a51fac0792e4a20c7.js.map
+  cache-control: public, max-age=31536000, immutable
+
+# gatsby-adapter-netlify end

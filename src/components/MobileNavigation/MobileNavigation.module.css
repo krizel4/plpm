@@ -2,6 +2,7 @@
     background-color: var(--standard-light-grey);
     padding: 16px 24px;
     margin-bottom: 8px;
+    display: none;
 }
 
 .authLinkContainer a {
@@ -108,6 +109,7 @@
     border-top: 1px solid var(--bg-light-gray);
     padding-top: 16px;
     margin: 16px 16px 0px 16px;
+    display: none;
 }
 
 .navFooter a, .logoutContainer {

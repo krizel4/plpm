@@ -3,7 +3,7 @@ import * as styles from './Policy.module.css'
 
 const Policy = (props) => {
   return (
-    <div className={styles.root}>
+    <div>
       <div className={styles.section}>
         <h3>1. Lorem Ipsum</h3>
         <p>
@@ -101,7 +101,7 @@ const Policy = (props) => {
         </p>
       </div>
     </div>
-  )
+  );
 }
 
 export default Policy

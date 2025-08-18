@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import * as styles from './Hero.module.css'
 import Button from '../Button'
 import { Link } from 'gatsby'
@@ -22,7 +23,7 @@ const Hero = (props) => {
 
   return (
     <div className={styles.root}>
-      {/* Background layer (image or video) */}
+      {/* background image or video */}
       {!videoURL && image && (
         <div
           className={styles.bg}
@@ -30,7 +31,6 @@ const Hero = (props) => {
           aria-hidden="true"
         />
       )}
-
       {videoURL && (
         <div
           className={`${styles.bg} ${styles.videoContainer}`}
@@ -46,6 +46,8 @@ const Hero = (props) => {
           />
         </div>
       )}
+
+      <div className={styles.overlay} aria-hidden="true" />
 
       {/* Foreground content */}
       <div className={styles.content} style={{ maxWidth }}>
@@ -68,7 +70,21 @@ const Hero = (props) => {
         )}
       </div>
     </div>
-  )
+  );
+}
+Hero.propTypes = {
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+  ctaText: PropTypes.string,
+  ctaAction: PropTypes.func,
+  image: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  maxWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  ctaStyle: PropTypes.string,
+  ctaLink: PropTypes.string,
+  ctaTo: PropTypes.string,
+  header: PropTypes.string,
+  video: PropTypes.string,
+  videoURL: PropTypes.string
 }
 
 export default Hero
