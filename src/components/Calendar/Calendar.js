@@ -79,7 +79,6 @@ export function CalendarApp () {
             autoPlay
             loop
             playsInline
-            muted
             controls={false}
           />
         )}
