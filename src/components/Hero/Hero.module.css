@@ -34,6 +34,7 @@
 
 .subtitle {
     margin: 20px 0;
+    font-size: 24px;
 }
 
 .content {
@@ -44,6 +45,7 @@
     text-align: center;
     white-space: pre-line;
     text-shadow: 1px 0px 20px rgb(93, 93, 93);
+    padding: 0 10%
 }
 
 @media (max-width: 1400px) {
