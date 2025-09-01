@@ -1,5 +1,5 @@
 
-## Tech Stack
+## Tech Stack & Resources
 - [Theme Designer](https://matterdesign.com.au/) 
 - [Gatsby](https://www.gatsbyjs.com/)
 - [CSS Modules](https://github.com/css-modules/css-modules)
