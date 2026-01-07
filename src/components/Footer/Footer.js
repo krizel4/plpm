@@ -76,7 +76,7 @@ const Footer = (prop) => {
                 </p>
                 <p>
                   <b>Days Open:</b> Tuesdays thru Saturday<br />
-                  <b>Hours:</b> 11:00am - 6:00pm
+                  <b>Hours:</b> 12:00pm - 6:00pm
                 </p>
               </div>
             </div>

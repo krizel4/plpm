@@ -35,9 +35,16 @@ module.exports = {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: process.env.GATSBY_CONTENTFUL_SPACE_ID,
-        accessToken: process.env.GATSBY_CONTENTFUL_ACCESS_TOKEN,
-        accessToken: process.env.GATSBY_CONTENTFUL_PREVIEW_ACCESS_TOKEN,
-        host: process.env.GATSBY_CONTENTFUL_HOST, 
+        // Use preview token if host is preview, otherwise use regular access token
+        accessToken: process.env.GATSBY_CONTENTFUL_HOST === 'preview.contentful.com' 
+          ? process.env.GATSBY_CONTENTFUL_PREVIEW_ACCESS_TOKEN 
+          : process.env.GATSBY_CONTENTFUL_ACCESS_TOKEN,
+        ...(process.env.GATSBY_CONTENTFUL_PREVIEW_ACCESS_TOKEN && {
+          previewAccessToken: process.env.GATSBY_CONTENTFUL_PREVIEW_ACCESS_TOKEN,
+        }),
+        ...(process.env.GATSBY_CONTENTFUL_HOST && {
+          host: process.env.GATSBY_CONTENTFUL_HOST,
+        }),
       },
     },
     'gatsby-plugin-image',
